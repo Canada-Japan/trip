@@ -1,0 +1,634 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.all1 {
+    display: block;
+}
+
+.top {
+    margin-top: 5vw;
+    height: 50vw;
+}
+
+.top p {
+    margin: 0;
+
+    padding: 0;
+    font-weight: 600;
+    font-size: 10vw;
+    width: 100vw;
+    text-align: center;
+}
+
+.h1 {
+    font-size: 10vw;
+    width: 100vw;
+    letter-spacing: 1vw;
+    color: black;
+    text-align: center;
+    margin: 0;
+}
+
+.h1 span {
+    color: red;
+}
+
+.img1 {
+    width: 95vw;
+    height: 70vw;
+    margin: 0;
+}
+
+.img1 img {
+    width: 95vw;
+    height: auto;
+    margin-top: 1vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+
+    border-radius: 5vw;
+    box-shadow: 0 0 10px 5px lightgray;
+}
+
+.img1 p {
+    width: 60vw;
+    margin-top: -40vw;
+    padding: 0;
+    font-size: 10vw;
+    font-weight: 600;
+    color: white;
+    margin-left: 5vw;
+    letter-spacing: 1vw;
+}
+
+.img1 div {
+    font-family: Arial;
+    text-align: center;
+    padding: 20px;
+    width: 15vw;
+    font-size: 2vw;
+    margin-left: 6vw;
+    margin-right: 0;
+    outline: 3px solid;
+    transition: 0.1s;
+}
+
+.img1 div:hover {
+    border-radius: 50px;
+    font-size: 2.2vw;
+}
+
+.img1 div:active {
+    outline: none;
+    font-weight: 550;
+}
+
+.img2 {
+    width: 95vw;
+    height: 70vw;
+    margin: 0;
+}
+
+.img2 img {
+    width: 95vw;
+    height: auto;
+    margin-top: 1vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+
+    border-radius: 5vw;
+    box-shadow: 0 0 10px 5px lightgray;
+}
+
+.img2 p {
+    width: 60vw;
+    margin-top: -40vw;
+    padding: 0;
+    font-size: 10vw;
+    font-weight: 600;
+    color: white;
+    margin-left: 5vw;
+    letter-spacing: 1vw;
+}
+
+.img2 div {
+    font-family: Arial;
+    text-align: center;
+    padding: 20px;
+    width: 15vw;
+    font-size: 2vw;
+    margin-left: 6vw;
+    margin-right: 0;
+    outline: 3px solid;
+    outline-color: white;
+    color: white;
+    transition: 0.1s;
+}
+
+.img2 div:hover {
+    border-radius: 50px;
+    font-size: 2.2vw;
+}
+
+.img2 div:active {
+    outline: none;
+    font-weight: 550;
+}
+
+.img3 {
+    width: 95vw;
+    height: 50vw;
+    margin: 0;
+}
+
+.img3 img {
+    width: 95vw;
+    height: auto;
+    margin-top: 1vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+
+    border-radius: 5vw;
+    box-shadow: 0 0 10px 5px lightgray;
+}
+
+.img3 p {
+    width: 60vw;
+    margin-top: -40vw;
+    padding: 0;
+    font-size: 10vw;
+    font-weight: 600;
+    color: white;
+    margin-left: 5vw;
+    letter-spacing: 1vw;
+}
+
+.img3 div {
+    font-family: fantasy;
+    text-align: center;
+    padding: 20px;
+    width: 15vw;
+    font-size: 2vw;
+    margin-left: 6vw;
+    margin-right: 0;
+    outline: 3px solid;
+    outline-color: white;
+    color: white;
+    transition: 0.1s;
+}
+
+.img3 div:hover {
+    border-radius: 50px;
+    font-size: 2.2vw;
+}
+
+.img3 div:active {
+    outline: none;
+    font-weight: 550;
+}
+.send {
+    width: 90vw;
+    border-bottom: 5px solid;
+    position: relative;
+    margin-left: 5vw;
+    margin-right: 0;
+    margin-bottom: 5vw;
+    margin-top: 15vw;
+
+}
+
+.send p {
+    width: 90vw;
+    font-size: 5vw;
+    font-weight: 600;
+}
+
+.send div {
+    position: absolute;
+    bottom: 6vw;
+    right: 20vw;
+    width: 10vw;
+    height: 3vw;
+    text-align: center;
+    padding: 1vw;
+    font-size: 2vw;
+    border: 3px solid black;
+    transition: 0.1s;
+    margin: 0;
+}
+
+.send div:hover {
+    border-radius: 10vw;
+    font-size: 2.2vw;
+}
+
+.send div:active {
+    font-weight: 600;
+    border: none;
+}
+
+.all2 {
+    display: none;
+    opacity: 0;
+}
+
+.top2 {
+    font-size: 2vw;
+    letter-spacing: 0.5vw;
+    margin-left: 5vw;
+    display: flex;
+}
+
+.table {
+    float: left;
+}
+
+
+.search {
+    width: 15vw;
+    margin-left: 5vw;
+
+}
+
+.search1 {
+    background-color: black;
+    color: white;
+    width: 15vw;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 1vw;
+}
+
+.ani:hover .search2 {
+    animation-name: s2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    display: block;
+    opacity: 1;
+}
+
+@keyframes s2 {
+    from {
+        height: 0;
+
+    }
+
+    to {
+        height: 7.4vw;
+    }
+}
+
+.search2 {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 15vw;
+    height: 7.4vw;
+    display: none;
+    opacity: 0;
+    z-index: 100;
+}
+
+.search2 p {
+    margin: 0;
+    padding: 0;
+    padding-left: 1vw;
+    padding-bottom: 1vw;
+    width: 14vw;
+    font-size: 1vw;
+    text-align: left;
+    letter-spacing: 0;
+}
+
+.search2 span {
+    border-left: 0.4vw solid white;
+    padding-left: 0.4vw;
+    padding-bottom: 0.2vw;
+}
+
+.search2 span:hover {
+    border-bottom: 1px solid white;
+    animation-name: hello;
+    animation-duration: 1.0s;
+    animation-fill-mode: forwards;
+}
+
+.search2 span:active {
+    font-weight: 550;
+}
+
+@keyframes hello {
+    from {
+        padding-right: 0vw;
+    }
+
+    to {
+        padding-right: 10vw;
+    }
+}
+
+.search2 .span2:active {
+    font-weight: 550;
+}
+
+.search2 .span2:hover {
+    border-bottom: 1px solid white;
+    animation-name: hello2;
+    animation-duration: 1.0s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hello2 {
+    from {
+        padding-right: 0vw;
+    }
+
+    to {
+        padding-right: 9.6vw;
+    }
+}
+
+.tables {
+    margin-top: 3.5vw;
+    width: 75vw;
+    height: 7.8vw;
+    background-color: black;
+    color: white;
+    display: none;
+    z-index: 0;
+}
+
+.tables p:hover {
+
+    animation-name: name;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes name {
+    from {
+        font-weight: 500;
+        font-size: 1vw;
+    }
+
+    to {
+        font-weight: 550;
+        font-size: 1.1vw;
+    }
+}
+
+.search3 {
+    height: 1vw;
+    display: none;
+    padding-left: 5vw;
+}
+
+.search3 p {
+    margin-left: 1vw;
+    padding: 0;
+    font-size: 1vw;
+    letter-spacing: 0;
+    display: inline-block;
+}
+
+.search4 {
+    height: 1vw;
+    display: none;
+    padding-left: 5vw;
+    display: none;
+}
+
+.search4 p {
+    margin-left: 1vw;
+    padding: 0;
+    font-size: 1vw;
+    letter-spacing: 0;
+    display: inline-block;
+}
+
+.search5 {
+    height: 1vw;
+    display: none;
+    padding-left: 5vw;
+    display: none
+}
+
+.search5 p {
+    margin-left: 1vw;
+    padding: 0;
+    font-size: 1vw;
+    letter-spacing: 0;
+    display: inline-block;
+}
+
+
+
+
+.pics img {
+    width: 70vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    border-radius: 30px;
+    box-shadow: 0 0 10px 5px lightgray;
+}
+
+.pics2 p {
+    margin: 0;
+    font-size: 2vw;
+    width: 15vw;
+    padding: 1vw;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.pics2 input {
+    border-radius: 20px;
+    text-align: center;
+    padding: 0;
+    width: 17vw;
+    height: 4vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    font-size: 2vw;
+    border: none;
+    outline: none;
+}
+
+.pics2 {
+    padding: 0;
+    margin-left: 5vw;
+    width: 17vw;
+    border: 1px solid black;
+
+    display: none;
+}
+
+.pics22 {
+    padding: 0;
+    margin-left: 5vw;
+    width: 17vw;
+    border: 1px solid black;
+}
+
+.pics22 p {
+    margin: 0;
+    font-size: 2vw;
+    width: 15vw;
+    padding: 1vw;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.back {
+    text-align: center;
+    border-radius: 5vw;
+    padding: 1vw;
+    width: 10vw;
+    margin-left: 5vw;
+    font-size: 2vw;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    transition: 0.2s;
+    float: left;
+}
+
+.back:hover {
+    background-color: white;
+    color: black;
+}
+
+.down {
+    display: none;
+    text-align: center;
+    border-radius: 5vw;
+    padding: 1vw;
+    width: 10vw;
+
+    font-size: 2vw;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    transition: 0.2s;
+    float: right;
+    margin-right: 5vw;
+}
+
+.down:hover {
+    background-color: white;
+    color: black;
+}
+
+.buttons {
+    width: 100vw;
+    margin-bottom: 10vw;
+}
+
+.down a {
+    text-decoration: none;
+    color: white;
+}
+
+.down a:hover {
+    color: black;
+}
+
+.pics22p{
+    padding:0;
+    margin:0;
+    margin-left:5vw;
+    width:90vw;
+    display: inline-block;
+
+}
+.pics22p img{
+    width:30vw;
+    height:auto;
+   padding:0;
+   margin:0;
+   
+  box-shadow:none;
+  border-radius:0;
+}
+
+.sum {
+    background-color: white;
+    color: black;
+    margin-left: 5vw;
+    font-size: 2vw;
+}
+
+.send2 {
+    position: relative;
+    display: inline-block;
+    height: 6vw;
+    width: 60vw;
+    margin-left: 5vw;
+    margin-bottom: 10vw;
+}
+
+.send2 .p {
+    position: absolute;
+    bottom: 0;
+    width: 20vw;
+    font-weight: 550;
+    font-size: 3vw;
+    display: inline-block;
+    margin: 0;
+}
+
+.send2 div {
+    position: absolute;
+    bottom: 0;
+    left: 35vw;
+    width: 10vw;
+    height: 4vw;
+    border: 2px solid black;
+    font-size: 2vw;
+    text-align: center;
+    display: inline-block;
+    transition: 0.1s;
+}
+
+.send2 div:hover {
+    border-radius: 5vw;
+    font-size: 2.3vw;
+}
+
+.send2 div:active {
+    font-weight: 600;
+    border: none;
+
+}
+
+label>input {
+    display: none;
+}
+
+label {
+    position: absolute;
+    bottom: 0;
+    left: 20vw;
+    display: block;
+    width: 10vw;
+    height: 4vw;
+    background-color: black;
+    padding: 0;
+    display: inline-block;
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.all3 {
+    display: none;
+    opacity: 0;
+}

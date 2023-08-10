@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Canada School Trip</title>
+        <link rel="stylesheet" href="css-index.css">
+    </head>
+    <body onload="start()">
+<div class="all1" id="all1">
+        <div class="top">
+    <h1 class="h1"><span>CANADA</span>×<span>JAPAN</span>
+       SCHOOL TRIP✈</h1>
+    <p>↓</p>
+</div>
+    <div class="img1">
+
+        <img src="" id="setimg">
+        <p>CANADA</p>
+        <div onclick="next1()">all show</div>
+    </div>
+    <div class="img2">
+      <img src="pic/img986.jpg" id="setimg2">
+      <p>JAPAN</p>
+      <div onclick="next2()">all show</div>
+  </div>
+  <div class="img3">
+    <img src="pic/img986.jpg" id="setimg3">
+    <p>MOVIES</p>
+    <div onclick="next3()">all show</div>
+</div>
+    <div class="send">
+      <p>Send Photos</p>
+      <!--div onclick="send()">send</div-->
+    </div>
+    <div class="send2" id="send2">
+      <p class="p">Put on Here→</p>
+      <label for="image-input">File...
+      <input type="file" id="image-input">
+     </label>
+      <div class="sendb" id="sendb" onclick="uploadImage()">UpLoad</div>
+    </div>
+</div>
+<div class="all2" id="all2">
+<div class="top2">
+    <h1>CANADA</h1>
+    <div class="search">
+      <div class="table">
+         <div class="ani">
+        <div class="search1" onclick="search3()">Search</div>
+        <div class="search2" id="search2">   
+            <p><span class="span2" id="span2"onclick="people()">People</span></p>
+            <p><span onclick="place()" id="span22">Place</span></p>
+            <p><span onclick="other()" id="span222">Other</span></p>
+        </div>
+    </div>
+      </div>
+      <div class="tables" id="tables">
+        <div class="search3" id="search3">
+            <p onclick="p1()">Aaron</p>
+            <p onclick="p2()">Ao</p>
+            <p onclick="p3()">Aoto</p>
+            <p onclick="p4()">Brandon</p>
+            <p onclick="p5()">Colin</p>
+            <p onclick="p6()">Kota</p>
+            <p onclick="p7()">Rui</p>
+            <p onclick="p8()">Shogo</p>
+            <p onclick="p9()">Shun</p>
+            <p onclick="p10()">Shuwa</p>
+            <p onclick="p11()">Taisei</p>
+            <p onclick="p12()">Yuki</p>
+        </div>
+
+        <div class="search4" id="search4">
+          <p onclick="p1()">House</p>
+          <p onclick="p2()">GHS</p>
+          <p onclick="p3()">Science .M</p>
+          <p onclick="p4()">History .M</p>
+          <p onclick="p5()">OMG Park</p>
+          <p onclick="p6()">Ice Hockey</p>
+          <p onclick="p7()">Pink .L</p>
+          <p onclick="p8()">Ottawa .D</p>
+          <p onclick="p9()">Montreal</p>
+          <p onclick="p10()">Air Port</p>
+          <p onclick="p11()">Other</p>
+      </div>
+        <div class="search5" id="search5">
+            <p onclick="p1()">Bowling</p>
+            <p onclick="p2()">Cycling</p>
+            <p onclick="p3()">Cats and Dogs</p>
+            <p onclick="p4()">OC transpo</p>
+            <p onclick="p5()">Photo Number</p>
+         </div>
+        </div>
+      </div>
+    </div>
+    <div class="pics">
+      <div class="pics2" id="pics2">
+        <p>Pictures</p>
+        <input type="number"id="text"value="" placeholder="photonumber">
+        <input type="number"id="text2"value="" placeholder="size">
+      </div>
+      <div class="pics22" id="pics22">
+          <p id="name">...</p>
+      </div>
+       <h4 id="sum" class="sum"></h4>
+      <div class="pics22p" id="pics22p">
+       <img src="" id="ims">
+      </div>
+     </div>
+     <div class="buttons">
+       <div class="back" onclick="back()">back</div>
+       <div class="down" id="down"><a href="" download="" id="down2">DownLoad</a></div>
+     </div>
+  </div>
+<div class="all3" id="all3">
+  <div class="top2">
+      <h1>JAPAN</h1>
+      <div class="search">
+        <div class="table">
+           <div class="ani">
+          <div class="search1" onclick="search3()">Search</div>
+          <div class="search2" id="search21">   
+              <p><span class="span2" id="span21"onclick="people()">People</span></p>
+              <p><span onclick="place()" id="span221">Place</span></p>
+              <p><span onclick="other()" id="span2221">Other</span></p>
+          </div>
+      </div>
+        </div>
+        <div class="tables" id="tables2">
+          <div class="search3" id="search33">
+              <p onclick="p1()">Ao</p>
+              <p onclick="p2()">Aoto</p>
+              <p onclick="p3()">Brandon</p>
+              <p onclick="p4()">Colin</p>
+              <p onclick="p5()">Ethan</p>
+          </div>
+          <div class="search4" id="search44">
+            <p onclick="p1()">House</p>
+            <p onclick="p2()">Yokohama</p>
+            <p onclick="p3()">Nissan Head Office</p>
+            <p onclick="p4()">Akihabara</p>
+            <p onclick="p5()">Houses of Parliament</p>
+            <p onclick="p6()">Museum</p>
+            <p onclick="p7()">Shinjuku</p>
+        </div>
+          <div class="search5" id="search55">
+
+           </div>
+          </div>
+      </div>
+        </div>
+        <div class="pics">
+          <div class="pics2" id="pics2a">
+            <p>Pictures</p>
+            <input type="number"id="text"value="" placeholder="photonumber">
+            <input type="number"id="text2"value="" placeholder="size">
+          </div>
+          <div class="pics22" id="pics22a">
+              <p id="namea">...</p>
+          </div>
+           <h4 id="suma" class="sum"></h4>
+          <div class="pics22p" id="pics22pa">
+           <img src="" id="ims">
+          </div>
+           <img src="" id="img">
+         </div>
+         <div class="buttons">
+           <div class="back" onclick="back()">back</div>
+           <div class="down" id="down"><a href="" download="" id="down2">DownLoad</a></div>
+         </div>
+      </div>
+    </div>
+  </div>
+<script src="js-index.js"></script>
+</body>        
+</html>

@@ -1757,10 +1757,26 @@ function send(){
     console.log(ipad)
     //location.href = 'mailto:'+'kazukazu.18@icloud.com'+'?subject='+'本文に写真を添付して送ってね';
 }
+document.getElementById('image-input').addEventListener('change',nameget);
+function nameget(){
+    const fileInput = document.getElementById('image-input');
+    const file = fileInput.files[0];
+    const reader = new FileReader();
+    reader.onload = async function(event) {
+      const imageData = event.target.result;
+      const fileName = file.name;
+      document.getElementById("image").innerHTML = fileName;
+      document.getElementById("image").style.fontSize = "1vw";
+      document.getElementById("image").style.paddingTop = "1.5vw"
+      document.getElementById("image").style.height = "2.5vw"
+    }
+    reader.readAsDataURL(file);
+}
 async function uploadImage() {
     const fileInput = document.getElementById('image-input');
     const file = fileInput.files[0];
-  
+  document.getElementById("sendb").innerHTML = "Uploading...";
+  document.getElementById("sendb").style.fontSize = "1vw";
     if (!file) {
       alert('画像ファイルを選択してください');
       return;
@@ -1771,8 +1787,8 @@ async function uploadImage() {
       const imageData = event.target.result;
       const fileName = file.name;
   
-      const uploadUrl = `https://api.github.com/repos/matsuoka18/Canada-photos/contents/pic2/${fileName}`;
-      const accessToken = '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';
+      const uploadUrl = `https://api.github.com/repos/canada-japan/datas/contents/${fileName}`;
+      const accessToken = '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';
   
       const uploadData = {
         message: '画像のアップロード',
@@ -1797,6 +1813,8 @@ async function uploadImage() {
             data: {value1:fileName,value2:ipad},
             complete: function(){alert("更新まで最大24時間かかります")}
           });
+          document.getElementById("sendb").innerHTML = "UpLoad";
+          document.getElementById("sendb").style.fontSize = "2vw";
         } else {
           alert('画像のアップロードに失敗しました');
         }

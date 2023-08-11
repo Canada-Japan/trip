@@ -1,4 +1,5 @@
 pics22p = '';
+ipad = '';
 function start() {
     size = screen.width;
     console.log("size:" + size);
@@ -15,9 +16,15 @@ function start() {
         data = "<img src=" + "\""  + "\"" + "id="+"\""+"ims"+a+"\""+">";
         pics22p.insertAdjacentHTML('beforeend', data);
     }*/
+    fetch('https://ipinfo.io?callback')
+    .then(res => res.json())
+    .then(json => next(json.ip))
 }
-
+function next(json){
+    ipad = json;
+}
 function next1() {
+
     message2 = "canada";
     document.getElementById("all1").style.display = "none";
     document.getElementById("all1").style.opacity = "0";
@@ -33,6 +40,7 @@ function next1() {
     document.getElementById("pics22p").style.display="none"
     document.getElementById("pics22p").style.opacity=0
     scrollTo(0,0);
+
 }
 function next2(){
     message2 = "japan";
@@ -1746,6 +1754,7 @@ del();
     }
 }
 function send(){
+    console.log(ipad)
     //location.href = 'mailto:'+'kazukazu.18@icloud.com'+'?subject='+'本文に写真を添付して送ってね';
 }
 async function uploadImage() {
@@ -1762,7 +1771,7 @@ async function uploadImage() {
       const imageData = event.target.result;
       const fileName = file.name;
   
-      const uploadUrl = `https://api.github.com/repos/matsuoka18/Canada-photos/contents/pic/${fileName}`;
+      const uploadUrl = `https://api.github.com/repos/matsuoka18/Canada-photos/contents/pic2/${fileName}`;
       const accessToken = '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';
   
       const uploadData = {
@@ -1782,6 +1791,12 @@ async function uploadImage() {
   
         if (response.ok) {
           alert('画像がアップロードされました');
+          $.ajax({
+            url: "https://maker.ifttt.com/trigger/hello/with/key/c_vpO05zoegXWA3suVbXNy",
+            type: "POST",
+            data: {value1:fileName,value2:ipad},
+            complete: function(){alert("更新まで最大24時間かかります")}
+          });
         } else {
           alert('画像のアップロードに失敗しました');
         }

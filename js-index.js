@@ -1,5 +1,5 @@
 pics22p = '';
-ipad = '';
+size='';
 function start() {
     size = screen.width;
     console.log("size:" + size);
@@ -16,15 +16,9 @@ function start() {
         data = "<img src=" + "\""  + "\"" + "id="+"\""+"ims"+a+"\""+">";
         pics22p.insertAdjacentHTML('beforeend', data);
     }*/
-    fetch('https://ipinfo.io?callback')
-    .then(res => res.json())
-    .then(json => next(json.ip))
 }
-function next(json){
-    ipad = json;
-}
-function next1() {
 
+function next1() {
     message2 = "canada";
     document.getElementById("all1").style.display = "none";
     document.getElementById("all1").style.opacity = "0";
@@ -40,7 +34,6 @@ function next1() {
     document.getElementById("pics22p").style.display="none"
     document.getElementById("pics22p").style.opacity=0
     scrollTo(0,0);
-
 }
 function next2(){
     message2 = "japan";
@@ -59,7 +52,11 @@ function next2(){
     scrollTo(0,0);
 }
 function next3(){
+    if(size<760){
+location.href="video2.html";
+    }else{
     location.href="video.html";
+    }
 }
 function test1() {
     document.getElementById("img").src = "https://matsuoka18.github.io/Canada-Photos/pic/img010.jpg";
@@ -481,7 +478,7 @@ del();
     } else if (message == "place") {
         if(message2 == "canada"){
         document.getElementById("name").innerHTML = "House";
-        dataa = [132,216,247,285,299,341,402,418,447,449,450,458,459,460,461,462,600,668,697,718,734,749,754785,787,858,868,883,890,897,901,917,949,960,963,978,983];
+        dataa = [132,216,247,285,299,341,402,418,447,449,450,458,459,460,461,462,600,749,754,785,787];
             last = dataa.length;
             te = "Total:"+last;
             document.getElementById("sum").innerHTML = te;
@@ -564,7 +561,7 @@ del();
     if (message == "people") {
         if(message2 == "canada"){
         document.getElementById("name").innerHTML = "Ao";
-        dataa = [2, 4, 7, 9, 13, 5, 19,29,33,53,59,63,68,74,80,93,94,95,105,114,116,123,124,127,133,137,138,154,157,158,159,162,163,170,196,197,200,202,209,228,234,238,252,255,259,266,268,270,274,283,295,310,313,314,327,349,350,352,354,355,356,379,381,416,427,429,431,493,587,598,608,609,611,635,643,650,654,664,677,685,688,691,694,701,737,741,744,770,781,803,808,823,830,871,884,888,893,898,899,902,905,906,911,923,929,942,945,946,948,950,952,956,957,958, 962, 965, 969, 977, 980];
+        dataa = [2, 4, 7, 9, 13, 5, 19,29,33,53,59,63,68,74,80,93,94,95,105,114,116,123,124,127,133,138,154,157,158,159,162,163,170,196,197,200,202,209,228,234,238,252,255,259,266,268,270,274,283,295,310,313,314,327,349,350,352,354,355,356,379,381,416,427,429,431,493,587,598,608,609,611,635,643,650,654,664,677,685,688,691,694,701,737,741,744,770,781,803,808,823,830,871,884,888,893,898,899,902,905,906,911,923,929,942,945,946,948,950,952,956,957,958, 962, 965, 969, 977, 980];
         last = dataa.length;
         te = "Total:"+last;
         document.getElementById("sum").innerHTML = te;
@@ -1754,29 +1751,12 @@ del();
     }
 }
 function send(){
-    console.log(ipad)
     //location.href = 'mailto:'+'kazukazu.18@icloud.com'+'?subject='+'本文に写真を添付して送ってね';
-}
-document.getElementById('image-input').addEventListener('change',nameget);
-function nameget(){
-    const fileInput = document.getElementById('image-input');
-    const file = fileInput.files[0];
-    const reader = new FileReader();
-    reader.onload = async function(event) {
-      const imageData = event.target.result;
-      const fileName = file.name;
-      document.getElementById("image").innerHTML = fileName;
-      document.getElementById("image").style.fontSize = "1vw";
-      document.getElementById("image").style.paddingTop = "1.5vw"
-      document.getElementById("image").style.height = "2.5vw"
-    }
-    reader.readAsDataURL(file);
 }
 async function uploadImage() {
     const fileInput = document.getElementById('image-input');
     const file = fileInput.files[0];
-  document.getElementById("sendb").innerHTML = "Uploading...";
-  document.getElementById("sendb").style.fontSize = "1vw";
+  
     if (!file) {
       alert('画像ファイルを選択してください');
       return;
@@ -1787,8 +1767,8 @@ async function uploadImage() {
       const imageData = event.target.result;
       const fileName = file.name;
   
-      const uploadUrl = `https://api.github.com/repos/canada-japan/datas/contents/${fileName}`;
-      const accessToken = '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';
+      const uploadUrl = `https://api.github.com/repos/matsuoka18/Canada-photos/contents/pic/${fileName}`;
+      const accessToken = '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';
   
       const uploadData = {
         message: '画像のアップロード',
@@ -1807,14 +1787,6 @@ async function uploadImage() {
   
         if (response.ok) {
           alert('画像がアップロードされました');
-          $.ajax({
-            url: "https://maker.ifttt.com/trigger/hello/with/key/c_vpO05zoegXWA3suVbXNy",
-            type: "POST",
-            data: {value1:fileName,value2:ipad},
-            complete: function(){alert("更新まで最大24時間かかります")}
-          });
-          document.getElementById("sendb").innerHTML = "UpLoad";
-          document.getElementById("sendb").style.fontSize = "2vw";
         } else {
           alert('画像のアップロードに失敗しました');
         }

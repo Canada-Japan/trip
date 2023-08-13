@@ -1,5 +1,4 @@
 size='';
-anic = '';
 function start() {
     size = screen.width;
     document.getElementById("setimg").src = "https://matsuoka18.github.io/Canada-Photos/pic/Img999.JPG";

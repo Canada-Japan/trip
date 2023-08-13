@@ -534,3 +534,91 @@ label {
         opacity:0;
         }
 }
+.all1{
+display: none;
+opacity: 0;
+}
+.al1{
+
+    background-color: rgb(255, 45, 45);
+    height:100vh;
+}
+.pic{
+    position:absolute;
+    top:35vh;
+    width:100vw;
+    height:auto;
+    opacity: 0;
+}
+.al1 p{
+    position:absolute;
+opacity: 0;
+padding:2vw;
+font-size:10vw;
+color:white;
+font-weight:600;
+font-family: Impact;
+border-bottom:2px solid white;
+letter-spacing: 0.5vw;
+}
+.al1 .p2{
+    border:none;
+}
+.al1 .bt{
+    position:absolute;
+opacity: 0;
+    font-size:5vw;
+    width:40vw;
+    color:white;
+    text-align:center;
+    border:2px solid white;
+    padding:5vw;
+    font-family: Impact;
+    letter-spacing: 1.5vw;
+}
+.al1 .bt:hover{
+    box-shadow:0 0 30px 2px lightpink;
+}
+.al1 .p4{
+    position:absolute;
+    top:47.5vh;
+    
+    opacity:0;
+    width:95vw;
+    text-align: center;
+    font-size:15vw;
+    font-weight:400;
+    color:white;
+    transform: rotate(90deg);
+    border:none;
+    font-family: Arial;
+}
+.al1 .p5{
+    position:absolute;
+    top:55vh;
+    
+    opacity:0;
+    width:95vw;
+    text-align: center;
+    font-size:15vw;
+    font-weight:400;
+    color:white;
+    transform: rotate(90deg);
+    border:none;
+    font-family: Arial;
+}
+.al1 .p6{
+    position:absolute;
+    top:62.5vh;
+    
+    opacity:0;
+    width:95vw;
+    text-align: center;
+    font-size:15vw;
+    font-weight:400;
+
+    font-family: Arial;
+    color:white;
+    transform: rotate(90deg);
+    border:none;
+}

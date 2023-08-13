@@ -77,8 +77,7 @@ body{
         margin-bottom:10vw;
     }
     .all2{
-        display: none;
-        opacity:0;
+
     }
     .top2 {
         font-size: 10vw;
@@ -450,8 +449,7 @@ body{
         border:none;
     }
     .all3 {
-        display: none;
-        opacity: 0;
+
     }
 
 .send2 {
@@ -515,4 +513,24 @@ label {
     color: white;
     font-size: 5vw;
     text-align: center;
+}
+.ld{
+    position: relative;
+    left:5vw;
+    top:2vw;
+    font-size:8vw;
+    animation-name: ani;
+    animation-fill-mode:backwards;
+    animation-duration:1.0s;
+    animation-iteration-count:infinite;
+    animation-timing-function:liner;
+    display: none;
+}
+@keyframes ani{
+    from{
+        opacity:1;
+        }
+        to{
+        opacity:0;
+        }
 }

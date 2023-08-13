@@ -9,45 +9,37 @@ function start() {
         pics22p.insertAdjacentHTML('beforeend', data);
     }*/
 }
+function startc(){
+    message2 = "canada";
 
+    for(var a =0; a<=135; a++){
+        data = "<img src=" + "\""  + "\"" + "id="+"\""+"ims"+a+"\""+">";
+        pics22p.insertAdjacentHTML('beforeend', data);
+    }
+    bt = "<div class="+"\""+"back"+"\""+"id="+"\""+"backk"+"\""+"onclick="+"\""+"back()"+"\""+">back</div>";
+    pics22p.insertAdjacentHTML('beforeend', bt);
+    document.getElementById("pics22p").style.display="none"
+    document.getElementById("pics22p").style.opacity=0
+    scrollTo(0,0);
+}
+function startj(){
+    message2 = "japan";
+    for(var a =0; a<=135; a++){
+        data = "<img src=" + "\""  + "\"" + "id="+"\""+"ims"+a+"\""+">";
+        pics22pa.insertAdjacentHTML('beforeend', data);
+    }
+    bt = "<div class="+"\""+"back"+"\""+"id="+"\""+"backk"+"\""+"onclick="+"\""+"back()"+"\""+">back</div>";
+    pics22pa.insertAdjacentHTML('beforeend', bt);
+    document.getElementById("pics22pa").style.display="none"
+    document.getElementById("pics22pa").style.opacity=0
+    scrollTo(0,0);
+}
 
 function next1() {
-    message2 = "canada";
-    document.getElementById("all1").style.display = "none";
-    document.getElementById("all1").style.opacity = "0";
-    document.getElementById("all2").style.display = "block";
-    document.getElementById("all2").style.opacity = "1";
-    document.getElementById("all3").style.display = "none";
-    document.getElementById("all3").style.opacity = "0";
-
-    for(var a =0; a<=135; a++){
-        data = "<img src=" + "\""  + "\"" + "id="+"\""+"ims"+a+"\""+">";
-        pics22p.insertAdjacentHTML('beforeend', data);
-    }
-    bt = "<div class="+"\""+"back"+"\""+"id="+"\""+"backk"+"\""+"onclick="+"\""+"back()"+"\""+">back</div>";
-    pics22p.insertAdjacentHTML('beforeend', bt);
-    document.getElementById("pics22p").style.display="none"
-    document.getElementById("pics22p").style.opacity=0
-    scrollTo(0,0);
-
+location.href = "canada-2.html";
 }
 function next2(){
-    message2 = "japan";
-    document.getElementById("all1").style.display = "none";
-    document.getElementById("all1").style.opacity = "0";
-    document.getElementById("all2").style.display = "none";
-    document.getElementById("all2").style.opacity = "0";
-    document.getElementById("all3").style.display = "block";
-    document.getElementById("all3").style.opacity = "1";
-    for(var a =0; a<=135; a++){
-        data = "<img src=" + "\""  + "\"" + "id="+"\""+"ims"+a+"\""+">";
-        pics22p.insertAdjacentHTML('beforeend', data);
-    }
-    bt = "<div class="+"\""+"back"+"\""+"id="+"\""+"backk"+"\""+"onclick="+"\""+"back()"+"\""+">back</div>";
-    pics22p.insertAdjacentHTML('beforeend', bt);
-    document.getElementById("pics22p").style.display="none"
-    document.getElementById("pics22p").style.opacity=0
-    scrollTo(0,0);
+location.href = "japan-2.html"
 }
 function next3(){
     if(size<760){
@@ -60,8 +52,8 @@ function test1() {
     document.getElementById("img").src = "https://matsuoka18.github.io/Canada-Photos/pic/img010.jpg";
 }
 
-document.getElementById("text").addEventListener('keyup', search);
-document.getElementById("text2").addEventListener('keyup', search2);
+/*document.getElementById("text").addEventListener('keyup', search);
+document.getElementById("text2").addEventListener('keyup', search2);*/
 function search() {
     text = document.getElementById("text").value;
     textlast = String(text).length
@@ -91,13 +83,7 @@ function search2() {
 
 }
 function back() {
-    document.getElementById("all1").style.display = "block";
-    document.getElementById("all1").style.opacity = "1";
-    document.getElementById("all2").style.display = "none";
-    document.getElementById("all2").style.opacity = "0";
-    document.getElementById("all3").style.display = "none";
-    document.getElementById("all3").style.opacity = "0";
-    document.getElementById("down").style.display = "none";
+location.href = "index.html";
     del();
     document.getElementById("name").innerHTML = "";
     document.getElementById("namea").innerHTML = "";
@@ -108,6 +94,7 @@ function DownLoad() {
 }
 num = 0;
 function search3() {
+    anic= 0;
     num++;
     if(message2 == "canada"){
     if (num == 1) {
@@ -140,10 +127,11 @@ function search3() {
 }
 message = '';
 function people() {
-    document.getElementById("pics22p").style.display="block"
-    document.getElementById("pics22p").style.opacity=1;
+
     message = "people";
     if(message2 == "canada"){
+        document.getElementById("pics22p").style.display="block"
+        document.getElementById("pics22p").style.opacity=1;
     document.getElementById("search2").style.display = "block";
     document.getElementById("search2").style.opacity = "1";
     num = 1;
@@ -164,6 +152,8 @@ function people() {
     document.getElementById("span222").style.borderBottom = "0vw solid white"
     document.getElementById("span222").style.paddingRight = "0px";
     }else{
+        document.getElementById("pics22pa").style.display="block"
+        document.getElementById("pics22pa").style.opacity=1;
         document.getElementById("search21").style.display = "block";
         document.getElementById("search21").style.opacity = "1";
         num = 1;
@@ -178,7 +168,7 @@ function people() {
         document.getElementById("search55").style.display = "none";
         document.getElementById("search55").style.opacity = "0";
         document.getElementById("span221").style.borderLeft = "0.4vw solid white";
-        document.getElementById("span222").style.borderBottom = "0vw solid white";
+        document.getElementById("span221").style.borderBottom = "0vw solid white";
         document.getElementById("span221").style.paddingRight = "0px";
         document.getElementById("span2221").style.borderLeft = "0.4vw solid white";
         document.getElementById("span2221").style.borderBottom = "0vw solid white"
@@ -186,10 +176,11 @@ function people() {
     }
 }
 function place() {
-    document.getElementById("pics22p").style.display="block"
-    document.getElementById("pics22p").style.opacity=1;
+
     message = "place";
     if(message2 == "canada"){
+            document.getElementById("pics22p").style.display="block"
+    document.getElementById("pics22p").style.opacity=1;
     document.getElementById("search2").style.display = "block";
     document.getElementById("search2").style.opacity = "1";
     num = 1;
@@ -210,6 +201,8 @@ function place() {
     document.getElementById("span222").style.borderBottom = "none";
     document.getElementById("span222").style.paddingRight = "0";
 }else{
+    document.getElementById("pics22pa").style.display="block"
+    document.getElementById("pics22pa").style.opacity=1;
 document.getElementById("search21").style.display = "block";
 document.getElementById("search21").style.opacity = "1";
 num = 1;
@@ -232,10 +225,11 @@ document.getElementById("span2221").style.paddingRight = "0";
 }
 }
 function other(){
-    document.getElementById("pics22p").style.display="block"
-    document.getElementById("pics22p").style.opacity=1;
+
     message = "other";
     if(message2 == "canada"){
+        document.getElementById("pics22p").style.display="block"
+        document.getElementById("pics22p").style.opacity=1;
     document.getElementById("search2").style.display = "block";
     document.getElementById("search2").style.opacity = "1";
     num = 1;
@@ -256,6 +250,8 @@ function other(){
     document.getElementById("span22").style.borderBottom = "none";
     document.getElementById("span22").style.paddingRight = "0";
 }else{
+    document.getElementById("pics22pa").style.display="block"
+    document.getElementById("pics22pa").style.opacity=1;
     document.getElementById("search21").style.display = "block";
     document.getElementById("search21").style.opacity = "1";
     num = 1;
@@ -417,27 +413,39 @@ document.getElementById("ims134").remove();
 document.getElementById("ims135").remove();
 }
 pushnum = 1;
-    function p1() {
 
+function ani(){
+anic++;
+if(anic == 1){
+document.getElementById("ld").style.display = "block"
+}else{
+    anic =0;
+    document.getElementById("ld").style.display = "none"
+}
+}
+    function p1() {
+ani();
 if(message2 == "canada"){
 document.getElementById("search2").style.display = "none";
 document.getElementById("search2").style.opacity = "0";
 document.getElementById("tables").style.display = "none";
 document.getElementById("tables").style.opacity = "0";
+document.getElementById("pics2").style.display = "none";
+document.getElementById("pics2").style.opacity = "0";
+document.getElementById("pics22").style.display = "block";
+document.getElementById("pics22").style.opacity = "1";
 }else if(message2 == "japan"){
     document.getElementById("search21").style.display = "none";
 document.getElementById("search21").style.opacity = "0";
 document.getElementById("tables22").style.display = "none";
 document.getElementById("tables22").style.opacity = "0";
+document.getElementById("pics2a").style.display = "none";
+document.getElementById("pics2a").style.opacity = "0";
+document.getElementById("pics22a").style.display = "block";
+document.getElementById("pics22a").style.opacity = "1";
 }
-    document.getElementById("pics2").style.display = "none";
-    document.getElementById("pics2").style.opacity = "0";
-    document.getElementById("pics22").style.display = "block";
-    document.getElementById("pics22").style.opacity = "1";
-    document.getElementById("pics2a").style.display = "none";
-    document.getElementById("pics2a").style.opacity = "0";
-    document.getElementById("pics22a").style.display = "block";
-    document.getElementById("pics22a").style.opacity = "1";
+
+
 del();
     if (message == "people") {
         if(message2 == "canada"){
@@ -517,7 +525,7 @@ del();
     } else if (message == "place") {
         if(message2 == "canada"){
         document.getElementById("name").innerHTML = "House";
-        dataa = [132,216,247,285,299,341,402,418,447,449,450,458,459,460,461,462,600,668,697,718,734,749,754785,787,858,868,883,890,897,901,917,949,960,963,978,983];
+        dataa = [132,216,247,285,299,341,402,418,447,449,450,458,459,460,461,462,600,668,697,718,734,749,754,785,787,858,868,883,890,897,901,917,949,960,963,978,983];
             last = dataa.length;
             te = "Total:"+last;
             document.getElementById("sum").innerHTML = te;
@@ -551,10 +559,11 @@ del();
             }
             bt = "<div class="+"\""+"back"+"\""+"id="+"\""+"backk"+"\""+"onclick="+"\""+"back()"+"\""+">back</div>";
             pics22p.insertAdjacentHTML('beforeend', bt);
+
         }else if(message2 == "japan"){
             document.getElementById("namea").innerHTML = "House";
             dataa = []
-        }
+
             last = dataa.length;
             te = "Total:"+last;
             document.getElementById("suma").innerHTML = te;
@@ -587,7 +596,7 @@ del();
                 bt = "<div class="+"\""+"back"+"\""+"id="+"\""+"backk"+"\""+"onclick="+"\""+"back()"+"\""+">back</div>";
                 pics22pa.insertAdjacentHTML('beforeend', bt);
             }
-
+        }
     } else if (message == "other") {
         document.getElementById("name").innerHTML = "Bowling";
         data = [];
@@ -604,32 +613,30 @@ del();
     btn = parseInt(btm2)-parseInt(btm)+"px";
     document.getElementById("backk").style.position = "relative";
     document.getElementById("backk").style.bottom = btn;
+    ani();
 }
 function p2() {
+    ani();
 del();
 if(message2 == "canada"){
 document.getElementById("search2").style.display = "none";
 document.getElementById("search2").style.opacity = "0";
 document.getElementById("tables").style.display = "none";
 document.getElementById("tables").style.opacity = "0";
+document.getElementById("pics2").style.display = "none";
+document.getElementById("pics2").style.opacity = "0";
+document.getElementById("pics22").style.display = "block";
+document.getElementById("pics22").style.opacity = "1";
 }else if(message2 == "japan"){
     document.getElementById("search21").style.display = "none";
 document.getElementById("search21").style.opacity = "0";
 document.getElementById("tables22").style.display = "none";
 document.getElementById("tables22").style.opacity = "0";
+document.getElementById("pics2a").style.display = "none";
+document.getElementById("pics2a").style.opacity = "0";
+document.getElementById("pics22a").style.display = "block";
+document.getElementById("pics22a").style.opacity = "1";
 }
-document.getElementById("search2").style.display = "none";
-document.getElementById("search2").style.opacity = "0";
-document.getElementById("tables").style.display = "none";
-document.getElementById("tables").style.opacity = "0";
-    document.getElementById("pics2").style.display = "none";
-    document.getElementById("pics2").style.opacity = "0";
-    document.getElementById("pics22").style.display = "block";
-    document.getElementById("pics22").style.opacity = "1";
-    document.getElementById("pics2a").style.display = "none";
-    document.getElementById("pics2a").style.opacity = "0";
-    document.getElementById("pics22a").style.display = "block";
-    document.getElementById("pics22a").style.opacity = "1";
     if (message == "people") {
         if(message2 == "canada"){
         document.getElementById("name").innerHTML = "Ao";
@@ -816,32 +823,30 @@ document.getElementById("tables").style.opacity = "0";
     btn = parseInt(btm2)-parseInt(btm)+"px";
     document.getElementById("backk").style.position = "relative";
     document.getElementById("backk").style.bottom = btn;
+    ani();
 }
 function p3() {
+    ani();
 del();
 if(message2 == "canada"){
 document.getElementById("search2").style.display = "none";
 document.getElementById("search2").style.opacity = "0";
 document.getElementById("tables").style.display = "none";
 document.getElementById("tables").style.opacity = "0";
+document.getElementById("pics2").style.display = "none";
+document.getElementById("pics2").style.opacity = "0";
+document.getElementById("pics22").style.display = "block";
+document.getElementById("pics22").style.opacity = "1";
 }else if(message2 == "japan"){
     document.getElementById("search21").style.display = "none";
 document.getElementById("search21").style.opacity = "0";
 document.getElementById("tables22").style.display = "none";
 document.getElementById("tables22").style.opacity = "0";
+document.getElementById("pics2a").style.display = "none";
+document.getElementById("pics2a").style.opacity = "0";
+document.getElementById("pics22a").style.display = "block";
+document.getElementById("pics22a").style.opacity = "1";
 }
-document.getElementById("search2").style.display = "none";
-document.getElementById("search2").style.opacity = "0";
-document.getElementById("tables").style.display = "none";
-document.getElementById("tables").style.opacity = "0";
-    document.getElementById("pics2").style.display = "none";
-    document.getElementById("pics2").style.opacity = "0";
-    document.getElementById("pics22").style.display = "block";
-    document.getElementById("pics22").style.opacity = "1";
-    document.getElementById("pics2a").style.display = "none";
-    document.getElementById("pics2a").style.opacity = "0";
-    document.getElementById("pics22a").style.display = "block";
-    document.getElementById("pics22a").style.opacity = "1";
     if (message == "people") {
         if(message2 == "canada"){
         document.getElementById("name").innerHTML = "Aoto";
@@ -1028,32 +1033,30 @@ document.getElementById("tables").style.opacity = "0";
     btn = parseInt(btm2)-parseInt(btm)+"px";
     document.getElementById("backk").style.position = "relative";
     document.getElementById("backk").style.bottom = btn;
+    ani();
 }
 function p4(){ //処理の見直しが必要かも　7月31日
+    ani();
 del();
 if(message2 == "canada"){
 document.getElementById("search2").style.display = "none";
 document.getElementById("search2").style.opacity = "0";
 document.getElementById("tables").style.display = "none";
 document.getElementById("tables").style.opacity = "0";
+document.getElementById("pics2").style.display = "none";
+document.getElementById("pics2").style.opacity = "0";
+document.getElementById("pics22").style.display = "block";
+document.getElementById("pics22").style.opacity = "1";
 }else if(message2 == "japan"){
     document.getElementById("search21").style.display = "none";
 document.getElementById("search21").style.opacity = "0";
 document.getElementById("tables22").style.display = "none";
 document.getElementById("tables22").style.opacity = "0";
+document.getElementById("pics2a").style.display = "none";
+document.getElementById("pics2a").style.opacity = "0";
+document.getElementById("pics22a").style.display = "block";
+document.getElementById("pics22a").style.opacity = "1";
 }
-document.getElementById("search2").style.display = "none";
-document.getElementById("search2").style.opacity = "0";
-document.getElementById("tables").style.display = "none";
-document.getElementById("tables").style.opacity = "0";
-    document.getElementById("pics2").style.display = "none";
-    document.getElementById("pics2").style.opacity = "0";
-    document.getElementById("pics22").style.display = "block";
-    document.getElementById("pics22").style.opacity = "1";
-    document.getElementById("pics2a").style.display = "none";
-    document.getElementById("pics2a").style.opacity = "0";
-    document.getElementById("pics22a").style.display = "block";
-    document.getElementById("pics22a").style.opacity = "1";
     if (message == "people") {
         if(message2 == "canada"){
         document.getElementById("name").innerHTML = "Brandon";
@@ -1176,32 +1179,30 @@ btm2 = document.getElementById("ims135").getBoundingClientRect().bottom;
 btn = parseInt(btm2)-parseInt(btm)+"px";
 document.getElementById("backk").style.position = "relative";
 document.getElementById("backk").style.bottom = btn;
+ani();
 }
 function p5() {
+    ani();
 del();
 if(message2 == "canada"){
 document.getElementById("search2").style.display = "none";
 document.getElementById("search2").style.opacity = "0";
 document.getElementById("tables").style.display = "none";
 document.getElementById("tables").style.opacity = "0";
+document.getElementById("pics2").style.display = "none";
+document.getElementById("pics2").style.opacity = "0";
+document.getElementById("pics22").style.display = "block";
+document.getElementById("pics22").style.opacity = "1";
 }else if(message2 == "japan"){
     document.getElementById("search21").style.display = "none";
 document.getElementById("search21").style.opacity = "0";
 document.getElementById("tables22").style.display = "none";
 document.getElementById("tables22").style.opacity = "0";
+document.getElementById("pics2a").style.display = "none";
+document.getElementById("pics2a").style.opacity = "0";
+document.getElementById("pics22a").style.display = "block";
+document.getElementById("pics22a").style.opacity = "1";
 }
-document.getElementById("search2").style.display = "none";
-document.getElementById("search2").style.opacity = "0";
-document.getElementById("tables").style.display = "none";
-document.getElementById("tables").style.opacity = "0";
-    document.getElementById("pics2").style.display = "none";
-    document.getElementById("pics2").style.opacity = "0";
-    document.getElementById("pics22").style.display = "block";
-    document.getElementById("pics22").style.opacity = "1";
-    document.getElementById("pics2a").style.display = "none";
-    document.getElementById("pics2a").style.opacity = "0";
-    document.getElementById("pics22a").style.display = "block";
-    document.getElementById("pics22a").style.opacity = "1";
     
     if (message == "people") {
         if(message2 == "canada"){
@@ -1326,32 +1327,30 @@ pics22p.insertAdjacentHTML('beforeend', bt);
     btn = parseInt(btm2)-parseInt(btm)+"px";
     document.getElementById("backk").style.position = "relative";
     document.getElementById("backk").style.bottom = btn;
+    ani();
 }
 function p6() {
+    ani();
 del();
 if(message2 == "canada"){
 document.getElementById("search2").style.display = "none";
 document.getElementById("search2").style.opacity = "0";
 document.getElementById("tables").style.display = "none";
 document.getElementById("tables").style.opacity = "0";
+document.getElementById("pics2").style.display = "none";
+document.getElementById("pics2").style.opacity = "0";
+document.getElementById("pics22").style.display = "block";
+document.getElementById("pics22").style.opacity = "1";
 }else if(message2 == "japan"){
     document.getElementById("search21").style.display = "none";
 document.getElementById("search21").style.opacity = "0";
 document.getElementById("tables22").style.display = "none";
 document.getElementById("tables22").style.opacity = "0";
+document.getElementById("pics2a").style.display = "none";
+document.getElementById("pics2a").style.opacity = "0";
+document.getElementById("pics22a").style.display = "block";
+document.getElementById("pics22a").style.opacity = "1";
 }
-document.getElementById("search2").style.display = "none";
-document.getElementById("search2").style.opacity = "0";
-document.getElementById("tables").style.display = "none";
-document.getElementById("tables").style.opacity = "0";
-    document.getElementById("pics2").style.display = "none";
-    document.getElementById("pics2").style.opacity = "0";
-    document.getElementById("pics22").style.display = "block";
-    document.getElementById("pics22").style.opacity = "1";
-    document.getElementById("pics2a").style.display = "none";
-    document.getElementById("pics2a").style.opacity = "0";
-    document.getElementById("pics22a").style.display = "block";
-    document.getElementById("pics22a").style.opacity = "1";
     if (message == "people") {
         document.getElementById("name").innerHTML = "Kota";
         dataa = [440, 632, 816];
@@ -1474,32 +1473,30 @@ document.getElementById("tables").style.opacity = "0";
     btn = parseInt(btm2)-parseInt(btm)+"px";
     document.getElementById("backk").style.position = "relative";
     document.getElementById("backk").style.bottom = btn;
+    ani();
 }
 function p7() {
+    ani();
 del();
 if(message2 == "canada"){
 document.getElementById("search2").style.display = "none";
 document.getElementById("search2").style.opacity = "0";
 document.getElementById("tables").style.display = "none";
 document.getElementById("tables").style.opacity = "0";
+document.getElementById("pics2").style.display = "none";
+document.getElementById("pics2").style.opacity = "0";
+document.getElementById("pics22").style.display = "block";
+document.getElementById("pics22").style.opacity = "1";
 }else if(message2 == "japan"){
     document.getElementById("search21").style.display = "none";
 document.getElementById("search21").style.opacity = "0";
 document.getElementById("tables22").style.display = "none";
 document.getElementById("tables22").style.opacity = "0";
+document.getElementById("pics2a").style.display = "none";
+document.getElementById("pics2a").style.opacity = "0";
+document.getElementById("pics22a").style.display = "block";
+document.getElementById("pics22a").style.opacity = "1";
 }
-document.getElementById("search2").style.display = "none";
-document.getElementById("search2").style.opacity = "0";
-document.getElementById("tables").style.display = "none";
-document.getElementById("tables").style.opacity = "0";
-    document.getElementById("pics2").style.display = "none";
-    document.getElementById("pics2").style.opacity = "0";
-    document.getElementById("pics22").style.display = "block";
-    document.getElementById("pics22").style.opacity = "1";
-    document.getElementById("pics2a").style.display = "none";
-    document.getElementById("pics2a").style.opacity = "0";
-    document.getElementById("pics22a").style.display = "block";
-    document.getElementById("pics22a").style.opacity = "1";
     if (message == "people") {
         document.getElementById("name").innerHTML = "Rui";
         dataa = [19,144,178,256,266,296,409,425,644,680,721,815,905,965,986];
@@ -1626,32 +1623,30 @@ document.getElementById("tables").style.opacity = "0";
     btn = parseInt(btm2)-parseInt(btm)+"px";
     document.getElementById("backk").style.position = "relative";
     document.getElementById("backk").style.bottom = btn;
+    ani();
 }
 function p8() {
+    ani();
 del();
 if(message2 == "canada"){
 document.getElementById("search2").style.display = "none";
 document.getElementById("search2").style.opacity = "0";
 document.getElementById("tables").style.display = "none";
 document.getElementById("tables").style.opacity = "0";
+document.getElementById("pics2").style.display = "none";
+document.getElementById("pics2").style.opacity = "0";
+document.getElementById("pics22").style.display = "block";
+document.getElementById("pics22").style.opacity = "1";
 }else if(message2 == "japan"){
     document.getElementById("search21").style.display = "none";
 document.getElementById("search21").style.opacity = "0";
 document.getElementById("tables22").style.display = "none";
 document.getElementById("tables22").style.opacity = "0";
+document.getElementById("pics2a").style.display = "none";
+document.getElementById("pics2a").style.opacity = "0";
+document.getElementById("pics22a").style.display = "block";
+document.getElementById("pics22a").style.opacity = "1";
 }
-document.getElementById("search2").style.display = "none";
-document.getElementById("search2").style.opacity = "0";
-document.getElementById("tables").style.display = "none";
-document.getElementById("tables").style.opacity = "0";
-    document.getElementById("pics2").style.display = "none";
-    document.getElementById("pics2").style.opacity = "0";
-    document.getElementById("pics22").style.display = "block";
-    document.getElementById("pics22").style.opacity = "1";
-    document.getElementById("pics2a").style.display = "none";
-    document.getElementById("pics2a").style.opacity = "0";
-    document.getElementById("pics22a").style.display = "block";
-    document.getElementById("pics22a").style.opacity = "1";
     if (message == "people") {
         document.getElementById("name").innerHTML = "Shogo";
         dataa = [3,6,19,65,74,89,100,105,159,163,170,237,252,266,268,286,300,348,358,365,401,410,414,604,611,745,769,775,780,813,876,974];
@@ -1737,32 +1732,30 @@ document.getElementById("tables").style.opacity = "0";
     btn = parseInt(btm2)-parseInt(btm)+"px";
     document.getElementById("backk").style.position = "relative";
     document.getElementById("backk").style.bottom = btn;
+    ani();
 }
 function p9() {
+    ani();
 del();
 if(message2 == "canada"){
 document.getElementById("search2").style.display = "none";
 document.getElementById("search2").style.opacity = "0";
 document.getElementById("tables").style.display = "none";
 document.getElementById("tables").style.opacity = "0";
+document.getElementById("pics2").style.display = "none";
+document.getElementById("pics2").style.opacity = "0";
+document.getElementById("pics22").style.display = "block";
+document.getElementById("pics22").style.opacity = "1";
 }else if(message2 == "japan"){
     document.getElementById("search21").style.display = "none";
 document.getElementById("search21").style.opacity = "0";
 document.getElementById("tables22").style.display = "none";
 document.getElementById("tables22").style.opacity = "0";
+document.getElementById("pics2a").style.display = "none";
+document.getElementById("pics2a").style.opacity = "0";
+document.getElementById("pics22a").style.display = "block";
+document.getElementById("pics22a").style.opacity = "1";
 }
-document.getElementById("search2").style.display = "none";
-document.getElementById("search2").style.opacity = "0";
-document.getElementById("tables").style.display = "none";
-document.getElementById("tables").style.opacity = "0";
-    document.getElementById("pics2").style.display = "none";
-    document.getElementById("pics2").style.opacity = "0";
-    document.getElementById("pics22").style.display = "block";
-    document.getElementById("pics22").style.opacity = "1";
-    document.getElementById("pics2a").style.display = "none";
-    document.getElementById("pics2a").style.opacity = "0";
-    document.getElementById("pics22a").style.display = "block";
-    document.getElementById("pics22a").style.opacity = "1";
     if (message == "people") {
         document.getElementById("name").innerHTML = "Shun";
         dataa = [6,8,9,13,15,19,33,43,58,63,67,74,80,95,97,99,109,114,116,120,126,133,158,163,170,193,197,225,228,235,252,253,259,262,265,268,274,293,300,303,306,321,323,328,331,348,356,365,369,376,379,392,396,409,414,416,427,428,588,599,610,627,643,652,657,663,664,669,677,688,700,711,737,741,744,746,769,770,773,775,778,780,794,823,831,838,842,843,846,849,861,863,876,884,902,903,904,905,914,929,930,941,942,952,957,961,964,965,975];
@@ -1848,32 +1841,30 @@ document.getElementById("tables").style.opacity = "0";
     btn = parseInt(btm2)-parseInt(btm)+"px";
     document.getElementById("backk").style.position = "relative";
     document.getElementById("backk").style.bottom = btn;
+    ani();
 }
 function p10() {
+    ani();
 del();
 if(message2 == "canada"){
 document.getElementById("search2").style.display = "none";
 document.getElementById("search2").style.opacity = "0";
 document.getElementById("tables").style.display = "none";
 document.getElementById("tables").style.opacity = "0";
+document.getElementById("pics2").style.display = "none";
+document.getElementById("pics2").style.opacity = "0";
+document.getElementById("pics22").style.display = "block";
+document.getElementById("pics22").style.opacity = "1";
 }else if(message2 == "japan"){
     document.getElementById("search21").style.display = "none";
 document.getElementById("search21").style.opacity = "0";
 document.getElementById("tables22").style.display = "none";
 document.getElementById("tables22").style.opacity = "0";
+document.getElementById("pics2a").style.display = "none";
+document.getElementById("pics2a").style.opacity = "0";
+document.getElementById("pics22a").style.display = "block";
+document.getElementById("pics22a").style.opacity = "1";
 }
-document.getElementById("search2").style.display = "none";
-document.getElementById("search2").style.opacity = "0";
-document.getElementById("tables").style.display = "none";
-document.getElementById("tables").style.opacity = "0";
-    document.getElementById("pics2").style.display = "none";
-    document.getElementById("pics2").style.opacity = "0";
-    document.getElementById("pics22").style.display = "block";
-    document.getElementById("pics22").style.opacity = "1";
-    document.getElementById("pics2a").style.display = "none";
-    document.getElementById("pics2a").style.opacity = "0";
-    document.getElementById("pics22a").style.display = "block";
-    document.getElementById("pics22a").style.opacity = "1";
     if (message == "people") {
         document.getElementById("name").innerHTML = "Shuwa";
         dataa = [42,88,144,197,228,381,409,412,604,644,663,801,815,816,823,846,879,905,928,942,944,948,965,972];
@@ -1959,32 +1950,30 @@ document.getElementById("tables").style.opacity = "0";
     btn = parseInt(btm2)-parseInt(btm)+"px";
     document.getElementById("backk").style.position = "relative";
     document.getElementById("backk").style.bottom = btn;
+        ani();
 }
 function p11() {
+    ani();
 del();
 if(message2 == "canada"){
 document.getElementById("search2").style.display = "none";
 document.getElementById("search2").style.opacity = "0";
 document.getElementById("tables").style.display = "none";
 document.getElementById("tables").style.opacity = "0";
+document.getElementById("pics2").style.display = "none";
+document.getElementById("pics2").style.opacity = "0";
+document.getElementById("pics22").style.display = "block";
+document.getElementById("pics22").style.opacity = "1";
 }else if(message2 == "japan"){
     document.getElementById("search21").style.display = "none";
 document.getElementById("search21").style.opacity = "0";
 document.getElementById("tables22").style.display = "none";
 document.getElementById("tables22").style.opacity = "0";
+document.getElementById("pics2a").style.display = "none";
+document.getElementById("pics2a").style.opacity = "0";
+document.getElementById("pics22a").style.display = "block";
+document.getElementById("pics22a").style.opacity = "1";
 }
-document.getElementById("search2").style.display = "none";
-document.getElementById("search2").style.opacity = "0";
-document.getElementById("tables").style.display = "none";
-document.getElementById("tables").style.opacity = "0";
-    document.getElementById("pics2").style.display = "none";
-    document.getElementById("pics2").style.opacity = "0";
-    document.getElementById("pics22").style.display = "block";
-    document.getElementById("pics22").style.opacity = "1";
-    document.getElementById("pics2a").style.display = "none";
-    document.getElementById("pics2a").style.opacity = "0";
-    document.getElementById("pics22a").style.display = "block";
-    document.getElementById("pics22a").style.opacity = "1";
     if (message == "people") {
         document.getElementById("name").innerHTML = "Taisei";
         dataa = [6,9,22,67,95,123,137,144,197,217,228,253,262,265,381,409,440,622,630,644,663,709,711,724,758,786,815,823,835,846,863,866,867,869,882,893,903,905,923,929,932,940,942,948,965,982,984];
@@ -2070,32 +2059,30 @@ document.getElementById("tables").style.opacity = "0";
     btn = parseInt(btm2)-parseInt(btm)+"px";
     document.getElementById("backk").style.position = "relative";
     document.getElementById("backk").style.bottom = btn;
+    ani();
 }
 function p12() {
+    ani();
 del();
 if(message2 == "canada"){
 document.getElementById("search2").style.display = "none";
 document.getElementById("search2").style.opacity = "0";
 document.getElementById("tables").style.display = "none";
 document.getElementById("tables").style.opacity = "0";
+document.getElementById("pics2").style.display = "none";
+document.getElementById("pics2").style.opacity = "0";
+document.getElementById("pics22").style.display = "block";
+document.getElementById("pics22").style.opacity = "1";
 }else if(message2 == "japan"){
     document.getElementById("search21").style.display = "none";
 document.getElementById("search21").style.opacity = "0";
 document.getElementById("tables22").style.display = "none";
 document.getElementById("tables22").style.opacity = "0";
+document.getElementById("pics2a").style.display = "none";
+document.getElementById("pics2a").style.opacity = "0";
+document.getElementById("pics22a").style.display = "block";
+document.getElementById("pics22a").style.opacity = "1";
 }
-document.getElementById("search2").style.display = "none";
-document.getElementById("search2").style.opacity = "0";
-document.getElementById("tables").style.display = "none";
-document.getElementById("tables").style.opacity = "0";
-    document.getElementById("pics2").style.display = "none";
-    document.getElementById("pics2").style.opacity = "0";
-    document.getElementById("pics22").style.display = "block";
-    document.getElementById("pics22").style.opacity = "1";
-    document.getElementById("pics2a").style.display = "none";
-    document.getElementById("pics2a").style.opacity = "0";
-    document.getElementById("pics22a").style.display = "block";
-    document.getElementById("pics22a").style.opacity = "1";
     if (message == "people") {
         document.getElementById("name").innerHTML = "Yuki";
         dataa = [482, 632, 816];
@@ -2154,6 +2141,7 @@ document.getElementById("tables").style.opacity = "0";
     btn = parseInt(btm2)-parseInt(btm)+"px";
     document.getElementById("backk").style.position = "relative";
     document.getElementById("backk").style.bottom = btn;
+    ani();
 }
 function send(){
     //location.href = 'mailto:'+'kazukazu.18@icloud.com'+'?subject='+'本文に写真を添付して送ってね';

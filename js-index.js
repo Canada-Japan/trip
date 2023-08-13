@@ -539,7 +539,7 @@ if(message2 == "canada"){
         }else if(message2 == "japan"){
             document.getElementById("namea").innerHTML = "House";
             dataa = []
-        }
+
             last = dataa.length;
             te = "Total:"+last;
             document.getElementById("suma").innerHTML = te;
@@ -570,6 +570,7 @@ if(message2 == "canada"){
                     pics22pa.insertAdjacentHTML('beforeend', data);
                 }
             }
+        }
     } else if (message == "other") {
         document.getElementById("name").innerHTML = "Bowling";
         data = [];

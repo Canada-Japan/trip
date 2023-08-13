@@ -1,5 +1,6 @@
 size='';
 anic = '';
+ipad='';
 function start() {
     size = screen.width;
     document.getElementById("setimg").src = "https://matsuoka18.github.io/Canada-Photos/pic/Img999.JPG";
@@ -2160,9 +2161,17 @@ document.getElementById("pics22a").style.opacity = "1";
     document.getElementById("backk").style.bottom = btn;
     ani();
 }
-function send(){
-    //location.href = 'mailto:'+'kazukazu.18@icloud.com'+'?subject='+'本文に写真を添付して送ってね';
+document.getElementById("image-input").addEventListener('change',write);
+function write(){
+alert("File is ready");
+fetch('https://ipinfo.io?callback')
+    .then(res => res.json())
+    .then(json => next(json.ip))
 }
+function next(json){
+    ipad = json;
+}
+fileName='';
 async function uploadImage() {
     const fileInput = document.getElementById('image-input');
     const file = fileInput.files[0];
@@ -2175,11 +2184,11 @@ async function uploadImage() {
     const reader = new FileReader();
     reader.onload = async function(event) {
       const imageData = event.target.result;
-      const fileName = file.name;
+      fileName = file.name;
   
-      const uploadUrl = `https://api.github.com/repos/matsuoka18/Canada-photos/contents/pic/${fileName}`;
-      const accessToken = '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';
-  
+      const uploadUrl = `https://api.github.com/repos/canada-japan/datas/contents/${fileName}`;
+      const accessToken = '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';
+  //最新コード8月14日
       const uploadData = {
         message: '画像のアップロード',
         content: imageData.split(',')[1],
@@ -2196,9 +2205,15 @@ async function uploadImage() {
         });
   
         if (response.ok) {
-          alert('画像がアップロードされました');
+          alert('File is Uploaded');
+          $.ajax({
+            url: "https://maker.ifttt.com/trigger/hello/with/key/c_vpO05zoegXWA3suVbXNy",
+            type: "POST",
+            data: {value1:fileName,value2:ipad},
+            complete: function(){alert("更新まで最大24時間かかります")}
+          })
         } else {
-          alert('画像のアップロードに失敗しました');
+          alert('Faild...');
         }
       } catch (error) {
         console.error('ネットワークエラー:', error);

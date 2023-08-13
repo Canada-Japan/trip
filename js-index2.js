@@ -1,4 +1,5 @@
 size='';
+anic = '';
 function start() {
     size = screen.width;
     document.getElementById("setimg").src = "https://matsuoka18.github.io/Canada-Photos/pic/Img999.JPG";
@@ -486,7 +487,7 @@ del();
         pics22p.insertAdjacentHTML('beforeend', bt);
 
         }else if(message2 == "japan"){
-            document.getElementById("namea").innerHTML = "Ao";
+                       /*document.getElementById("namea").innerHTML = "Ao";
             dataa = []
             last = dataa.length;
             te = "Total:"+last;
@@ -517,6 +518,11 @@ del();
                     data = "<img src=" + "\""  + "\"" + "id="+"\""+"ims"+a+"\""+">";
                     pics22pa.insertAdjacentHTML('beforeend', data);
                 }
+            }*/
+            alert("No data")
+            for(var a = 0; a<=135; a++){
+                data = "<img src=" + "\""  + "\"" + "id="+"\""+"ims"+a+"\""+">";
+                pics22pa.insertAdjacentHTML('beforeend', data);
             }
             bt = "<div class="+"\""+"back"+"\""+"id="+"\""+"backk"+"\""+"onclick="+"\""+"back()"+"\""+">back</div>";
             pics22pa.insertAdjacentHTML('beforeend', bt);
@@ -525,7 +531,7 @@ del();
     } else if (message == "place") {
         if(message2 == "canada"){
         document.getElementById("name").innerHTML = "House";
-        dataa = [132,216,247,285,299,341,402,418,447,449,450,458,459,460,461,462,600,668,697,718,734,749,754,785,787,858,868,883,890,897,901,917,949,960,963,978,983];
+        dataa = [132,216,247,285,299,341,402,418,447,449,450,458,459,460,461,462,600,749,754,785,787];
             last = dataa.length;
             te = "Total:"+last;
             document.getElementById("sum").innerHTML = te;
@@ -561,7 +567,7 @@ del();
             pics22p.insertAdjacentHTML('beforeend', bt);
 
         }else if(message2 == "japan"){
-            document.getElementById("namea").innerHTML = "House";
+                     /*  document.getElementById("namea").innerHTML = "House";
             dataa = []
 
             last = dataa.length;
@@ -593,9 +599,16 @@ del();
                     data = "<img src=" + "\""  + "\"" + "id="+"\""+"ims"+a+"\""+">";
                     pics22pa.insertAdjacentHTML('beforeend', data);
                 }
+            }
+        }*/
+        alert("No data");
+        for(var a = 0; a<=135; a++){
+            data = "<img src=" + "\""  + "\"" + "id="+"\""+"ims"+a+"\""+">";
+            pics22pa.insertAdjacentHTML('beforeend', data);
+        }
                 bt = "<div class="+"\""+"back"+"\""+"id="+"\""+"backk"+"\""+"onclick="+"\""+"back()"+"\""+">back</div>";
                 pics22pa.insertAdjacentHTML('beforeend', bt);
-            }
+            
         }
     } else if (message == "other") {
         document.getElementById("name").innerHTML = "Bowling";
@@ -640,7 +653,7 @@ document.getElementById("pics22a").style.opacity = "1";
     if (message == "people") {
         if(message2 == "canada"){
         document.getElementById("name").innerHTML = "Ao";
-        dataa = [2, 4, 7, 9, 13, 5, 19,29,33,53,59,63,68,74,80,93,94,95,105,114,116,123,124,127,133,137,138,154,157,158,159,162,163,170,196,197,200,202,209,228,234,238,252,255,259,266,268,270,274,283,295,310,313,314,327,349,350,352,354,355,356,379,381,416,427,429,431,493,587,598,608,609,611,635,643,650,654,664,677,685,688,691,694,701,737,741,744,770,781,803,808,823,830,871,884,888,893,898,899,902,905,906,911,923,929,942,945,946,948,950,952,956,957,958, 962, 965, 969, 977, 980];
+        dataa = [2, 4, 7, 9, 13, 19,29,33,53,59,63,68,74,80,93,94,95,105,114,116,123,124,127,133,138,154,157,158,159,162,163,170,196,197,200,202,209,228,234,238,252,255,259,266,268,270,274,283,295,310,313,314,327,349,350,354,355,356,379,381,416,427,429,431,493,587,598,608,609,611,635,643,650,654,664,677,685,688,691,694,701,737,741,744,770,781,803,808,823,830,871,884,888,898,899,902,905,906,911,923,929,942,945,946,948,950,952,956,957,958, 962, 965, 969, 977, 980];
         last = dataa.length;
         te = "Total:"+last;
         document.getElementById("sum").innerHTML = te;
@@ -783,7 +796,7 @@ document.getElementById("pics22a").style.opacity = "1";
         }
     } else if (message == "other") {
         document.getElementById("name").innerHTML = "Cycling";
-        dataa = [119, 362, 674, 924, 949];
+        dataa = [119, 362, 674, 924];
         last = dataa.length;
         te = "Total:"+last;
         document.getElementById("sum").innerHTML = te;
@@ -885,7 +898,7 @@ document.getElementById("pics22a").style.opacity = "1";
             pics22p.insertAdjacentHTML('beforeend', bt);
         }else if(message2 == "japan"){
             document.getElementById("namea").innerHTML = "Brandon";
-            dataa =[992,996,997,1059,1061,1063,]
+            dataa =[992,996,997,1059,1061,1063]
             last = dataa.length;
             te = "Total:"+last;
             document.getElementById("suma").innerHTML = te;
@@ -993,7 +1006,7 @@ document.getElementById("pics22a").style.opacity = "1";
         }
     } else if (message == "other") {
         document.getElementById("name").innerHTML = "Cats and Dogs";
-        dataa = [23,52,101,112,134,140,171,187,189,194,195,215,233,261,280,301,317,318,391,448,450,508,509,510,523,524,525,534,535,536,537,538,539,548,549,550,551,552,554,556,557,558,560,561,562,563,591,624,671,675,681,736,811,834,854,872,908,919,953,955];
+        dataa = [23,52,101,112,134,140,171,187,189,194,195,215,233,261,280,301,317,318,391,448,450,508,509,510,523,524,525,534,535,536,537,538,539,548,549,550,551,552,554,556,557,558,559,560,562,591,624,671,675,681,736,811,834,854,872,908,919,953,955];
             last = dataa.length;
             te = "Total:"+last;
             document.getElementById("sum").innerHTML = te;
@@ -1095,7 +1108,7 @@ bt = "<div class="+"\""+"back"+"\""+"id="+"\""+"backk"+"\""+"onclick="+"\""+"bac
 pics22p.insertAdjacentHTML('beforeend', bt);
         }else if(message2 == "japan"){
             document.getElementById("namea").innerHTML = "Colin";
-            dataa = [1006,1007,1009,1010,1014,1018,1019,1021,1022,1023,1035,1051,1052,1055,1064,1058];
+            dataa = [19,36,80,173,196,234,266,293,297,303,373,482,695,700,701,721,744,831];
             last = dataa.length;
             te = "Total:"+last;
             document.getElementById("suma").innerHTML = te;
@@ -1131,10 +1144,11 @@ pics22p.insertAdjacentHTML('beforeend', bt);
         }
     } else if (message == "place") {
         if(message2 == "canada"){
-        document.getElementById("name").innerHTML = "History .M";
-        data = [];
-        bt = "<div class="+"\""+"back"+"\""+"id="+"\""+"backk"+"\""+"onclick="+"\""+"back()"+"\""+">back</div>";
-        pics22p.insertAdjacentHTML('beforeend', bt);
+            alert("No data");
+            for(var a = 0; a<=135; a++){
+                data = "<img src=" + "\""  + "\"" + "id="+"\""+"ims"+a+"\""+">";
+                pics22p.insertAdjacentHTML('beforeend', data);
+            }
         }else if(message2 == "japan"){
             document.getElementById("namea").innerHTML = "Akihabara";
             dataa = [1040,1039,1038,1037,1036,1035,1034,1033,1032,1031,1030,1029]
@@ -1207,7 +1221,7 @@ document.getElementById("pics22a").style.opacity = "1";
     if (message == "people") {
         if(message2 == "canada"){
         document.getElementById("name").innerHTML = "Colin";
-        dataa = [19,36,80,173,196,234,266,293,303,373,482,695,700,701,721,744,831];
+        dataa = [19,36,80,173,196,234,266,293,297,303,352,373,482,695,700,701,721,744,831];
 last = dataa.length;
 te = "Total:"+last;
 document.getElementById("sum").innerHTML = te;
@@ -1278,8 +1292,11 @@ pics22p.insertAdjacentHTML('beforeend', bt);
         }
     } else if (message == "place") {
         if(message2 == "canada"){
-        document.getElementById("name").innerHTML = "OMG Park";
-        data = [];
+            alert("No data");
+            for(var a = 0; a<=135; a++){
+                data = "<img src=" + "\""  + "\"" + "id="+"\""+"ims"+a+"\""+">";
+                pics22p.insertAdjacentHTML('beforeend', data);
+            }
         bt = "<div class="+"\""+"back"+"\""+"id="+"\""+"backk"+"\""+"onclick="+"\""+"back()"+"\""+">back</div>";
         pics22p.insertAdjacentHTML('beforeend', bt);
         }else if(message2 == "japan"){
@@ -1424,7 +1441,7 @@ document.getElementById("pics22a").style.opacity = "1";
             pics22p.insertAdjacentHTML('beforeend', bt);
         }else if(message2 == "japan"){
             document.getElementById("namea").innerHTML = "Museums";
-            dataa = [1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023,1024,1025,]
+            dataa = [1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023,1024,1025]
             last = dataa.length;
             te = "Total:"+last;
             document.getElementById("suma").innerHTML = te;
@@ -1609,7 +1626,7 @@ document.getElementById("pics22a").style.opacity = "1";
         }
             
     } else if (message == "other") {
-        document.getElementById("name").innerHTML = "Bowling";
+        alert("No data")
         for(var a =0; a<=135; a++){
             data = "<img src=" + "\""  + "\"" + "id="+"\""+"ims"+a+"\""+">";
             pics22p.insertAdjacentHTML('beforeend', data);
@@ -1649,7 +1666,7 @@ document.getElementById("pics22a").style.opacity = "1";
 }
     if (message == "people") {
         document.getElementById("name").innerHTML = "Shogo";
-        dataa = [3,6,19,65,74,89,100,105,159,163,170,237,252,266,268,286,300,348,358,365,401,410,414,604,611,745,769,775,780,813,876,974];
+        dataa = [3,6,19,65,74,89,100,159,163,170,237,252,266,268,286,300,348,358,365,401,410,604,611,654,745,769,775,780,813,876,974];
             last = dataa.length;
             te = "Total:"+last;
             document.getElementById("sum").innerHTML = te;
@@ -1758,7 +1775,7 @@ document.getElementById("pics22a").style.opacity = "1";
 }
     if (message == "people") {
         document.getElementById("name").innerHTML = "Shun";
-        dataa = [6,8,9,13,15,19,33,43,58,63,67,74,80,95,97,99,109,114,116,120,126,133,158,163,170,193,197,225,228,235,252,253,259,262,265,268,274,293,300,303,306,321,323,328,331,348,356,365,369,376,379,392,396,409,414,416,427,428,588,599,610,627,643,652,657,663,664,669,677,688,700,711,737,741,744,746,769,770,773,775,778,780,794,823,831,838,842,843,846,849,861,863,876,884,902,903,904,905,914,929,930,941,942,952,957,961,964,965,975];
+        dataa = [6,8,9,13,15,19,33,43,58,63,67,74,80,95,97,99,109,114,116,120,126,133,158,163,170,193,197,225,228,235,252,253,259,262,265,268,274,293,300,303,306,321,323,331,348,356,365,369,376,379,392,396,409,414,416,427,428,588,599,610,627,643,652,657,663,664,669,677,688,700,711,737,741,744,746,769,770,773,775,778,780,794,823,831,838,842,843,846,849,861,863,876,884,902,903,904,905,914,929,930,941,942,952,957,961,964,965,975];
             last = dataa.length;
             te = "Total:"+last;
             document.getElementById("sum").innerHTML = te;
@@ -1827,7 +1844,7 @@ document.getElementById("pics22a").style.opacity = "1";
             bt = "<div class="+"\""+"back"+"\""+"id="+"\""+"backk"+"\""+"onclick="+"\""+"back()"+"\""+">back</div>";
             pics22p.insertAdjacentHTML('beforeend', bt);
     } else if (message == "other") {
-        document.getElementById("name").innerHTML = "Bowling";
+        alert("No data")
         for(var a =0; a<=135; a++){
             data = "<img src=" + "\""  + "\"" + "id="+"\""+"ims"+a+"\""+">";
             pics22p.insertAdjacentHTML('beforeend', data);
@@ -1936,7 +1953,7 @@ document.getElementById("pics22a").style.opacity = "1";
         bt = "<div class="+"\""+"back"+"\""+"id="+"\""+"backk"+"\""+"onclick="+"\""+"back()"+"\""+">back</div>";
         pics22p.insertAdjacentHTML('beforeend', bt);
     } else if (message == "other") {
-        document.getElementById("name").innerHTML = "Bowling";
+        alert("No data")
         for(var a =0; a<=135; a++){
             data = "<img src=" + "\""  + "\"" + "id="+"\""+"ims"+a+"\""+">";
             pics22p.insertAdjacentHTML('beforeend', data);
@@ -1976,7 +1993,7 @@ document.getElementById("pics22a").style.opacity = "1";
 }
     if (message == "people") {
         document.getElementById("name").innerHTML = "Taisei";
-        dataa = [6,9,22,67,95,123,137,144,197,217,228,253,262,265,381,409,440,622,630,644,663,709,711,724,758,786,815,823,835,846,863,866,867,869,882,893,903,905,923,929,932,940,942,948,965,982,984];
+        dataa = [9,22,67,95,123,137,144,197,217,228,253,262,265,327,381,409,440,622,630,644,663,709,711,724,758,786,815,823,835,846,863,866,867,869,882,893,903,905,923,929,932,940,942,948,965,982,984];
             last = dataa.length;
             te = "Total:"+last;
             document.getElementById("sum").innerHTML = te;

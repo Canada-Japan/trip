@@ -1,5 +1,29 @@
+function start(){
+    size = screen.width;
+    console.log("size:" + size);
+
+    if (size < 760) {
+
+        location.href = "index2.html";
+    } else {
+        document.getElementById("setimg").src = "https://matsuoka18.github.io/Canada-Photos/pic/img921.jpg"
+        document.getElementById("setimg2").src = "https://matsuoka18.github.io/Canada-Photos/pic/img986.jpg"
+        document.getElementById("setimg3").src = "https://matsuoka18.github.io/Canada-Photos/pic/img589.jpg"
+    }
+    /*for(var a =0; a<=135; a++){
+        data = "<img src=" + "\""  + "\"" + "id="+"\""+"ims"+a+"\""+">";
+        pics22p.insertAdjacentHTML('beforeend', data);
+    }*/
+starta();
+}
 function starta(){
-    start();
+    $("#pic").animate({
+        'opacity':0,
+        'top':'0vh',
+        'left':'35vw'
+      },{
+          'duration':0
+      })    
     $("#pic").animate({
       'opacity':1,
     },{
@@ -11,65 +35,72 @@ function starta(){
           'duration':2000
       })
     $("#pic").animate({
-        'top':'0vh'
+        'top':'0vh',
+        'left':'0'
       },{
           'duration':1500
       })
 setTimeout(()=>{
-    $("#p1").animate({
-        'top':'30vh',
+
+    $("#al1").animate({
+        'height':'200vh'
+      },{
+          'duration':0
+      })
+      $("#p1").animate({
+        'top':'20vh',
         'left':'0'
       },{
           'duration':0
       })
       $("#p2").animate({
-        'top':'37.5vh',
+        'top':'30vh',
         'left':'0'
       },{
           'duration':0
       })
       $("#p3").animate({
-        
-        'top':'42.5vh',
+        'top':'40vh',
         'left':'0'
       },{
           'duration':0
       })
       $("#p1").animate({
         'opacity':1,
-        'top':'30vh',
-        'left':'10vw'
+        'top':'20vh',
+        'left':'20vw'
       },{
           'duration':1500
       })
       $("#p2").animate({
         'opacity':1,
-        'top':'37.5vh',
-        'left':'50vw'
+        'top':'30vh',
+        'left':'45vw'
       },{
           'duration':1500
       })
       $("#p3").animate({
         'opacity':1,
-        'top':'42.5vh',
-        'left':'65vw'
+        'top':'40vh',
+        'left':'60vw'
       },{
           'duration':1500
       })
       setTimeout(()=>{
         $("#bt").animate({
         'top':'50vh',
-        'left':'25vw'
+        'left':'35vw'
         },{
     'duration':0
         })
         $("#bt").animate({
             'opacity':1,
-          'top':'80vh',
-          'left':'25vw'
+          'top':'125vh',
+          'left':'35vw'
           },{
     'duration':2000
           })
+          
       },1500)
       setTimeout(()=>{
         $("#p4").animate({
@@ -163,6 +194,21 @@ setTimeout(()=>{
             'opacity':0,
           },{
     'duration':1000
+          })
+          $("#p4").animate({
+            'opacity':1,
+          },{
+    'duration':1000
+          })
+          $("#p5").animate({
+            'opacity':1,
+          },{
+    'duration':1250
+          })
+          $("#p6").animate({
+            'opacity':1,
+          },{
+    'duration':1500
           })
       },2000)
 },3000)
@@ -265,6 +311,7 @@ function next(){
 setTimeout(next2,4500);
 }
 function next2(){
+    scrollTo(0,0)
     document.getElementById("all1").style.display = "block"
     $("#all1").animate({
         'opacity':0
@@ -281,13 +328,3 @@ function next2(){
       })
 
 }
-function start(){
-        size = screen.width;
-        document.getElementById("setimg").src = "https://matsuoka18.github.io/Canada-Photos/pic/Img999.JPG";
-        document.getElementById("setimg2").src = "https://matsuoka18.github.io/Canada-Photos/pic2/img1029.jpg";
-        document.getElementById("setimg3").src = "https://matsuoka18.github.io/Canada-Photos/pic/img953.jpg";
-        /*for(var a =0; a<=135; a++){
-            data = "<img src=" + "\""  + "\"" + "id="+"\""+"ims"+a+"\""+">";
-            pics22p.insertAdjacentHTML('beforeend', data);
-        }*/
-    }

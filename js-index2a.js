@@ -1,4 +1,7 @@
 function starta(){
+  cookie = document.cookie;
+  cookie = cookie.indexOf("load=1");
+  if(cookie == -1){
     start();
     $("#pic").animate({
       'opacity':1,
@@ -166,7 +169,13 @@ setTimeout(()=>{
           })
       },2000)
 },3000)
-
+  }else{
+    start();
+    document.getElementById("al1").style.display = "none";
+    document.getElementById("al1").style.display = 0;
+    document.getElementById("all1").style.display = "block";
+    document.getElementById("all1").style.display = 1;
+  }
 }
 function jump(){
     setTimeout(()=>{
@@ -262,9 +271,9 @@ function next(){
         'easing':'swing',
 'duration':2500
       })
-setTimeout(next2,4500);
+setTimeout(next22,4500);
 }
-function next2(){
+function next22(){
     document.getElementById("all1").style.display = "block"
     $("#all1").animate({
         'opacity':0

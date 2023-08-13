@@ -17,6 +17,9 @@ function start(){
 starta();
 }
 function starta(){
+  cookie = document.cookie;
+  cookie = cookie.indexOf("load=1");
+  if(cookie == -1){
     $("#pic").animate({
         'opacity':0,
         'top':'0vh',
@@ -212,7 +215,12 @@ setTimeout(()=>{
           })
       },2000)
 },3000)
-
+  }else{
+    document.getElementById("al1").style.display = "none";
+    document.getElementById("al1").style.display = 0;
+    document.getElementById("all1").style.display = "block";
+    document.getElementById("all1").style.display = 1;
+  }
 }
 function jump(){
     setTimeout(()=>{

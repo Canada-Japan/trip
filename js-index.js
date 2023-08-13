@@ -105,6 +105,7 @@ function search2() {
 
 }
 function back() {
+    document.cookie = "load=1; max-age=10";
     location.href = "index.html";
     /*document.getElementById("all1").style.display = "block";
     document.getElementById("all1").style.opacity = "1";
@@ -113,6 +114,7 @@ function back() {
     document.getElementById("all3").style.display = "none";
     document.getElementById("all3").style.opacity = "0";
     document.getElementById("down").style.display = "none";*/
+
 }
 function DownLoad() {
     document.getElementById("down2").href = textt;

@@ -85,10 +85,12 @@ function search2() {
 
 }
 function back() {
+    cookie = cookie.indexOf("load=1");
 location.href = "index.html";
     del();
     document.getElementById("name").innerHTML = "";
     document.getElementById("namea").innerHTML = "";
+
 }
 function DownLoad() {
     document.getElementById("down2").href = textt;

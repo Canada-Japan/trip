@@ -308,9 +308,9 @@ function next(){
         'easing':'swing',
 'duration':2500
       })
-setTimeout(next2,4500);
+setTimeout(next22,4500);
 }
-function next2(){
+function next22(){
     scrollTo(0,0)
     document.getElementById("all1").style.display = "block"
     $("#all1").animate({

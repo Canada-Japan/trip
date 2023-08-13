@@ -172,9 +172,9 @@ setTimeout(()=>{
   }else{
     start();
     document.getElementById("al1").style.display = "none";
-    document.getElementById("al1").style.display = 0;
+    document.getElementById("al1").style.opacity = 0;
     document.getElementById("all1").style.display = "block";
-    document.getElementById("all1").style.display = 1;
+    document.getElementById("all1").style.opacity = 1;
   }
 }
 function jump(){

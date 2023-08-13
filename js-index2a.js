@@ -271,6 +271,12 @@ function next(){
         'easing':'swing',
 'duration':2500
       })
+      document.getElementById("p4").style.display = "none"
+      document.getElementById("p5").style.display = "none"
+      document.getElementById("p6").style.display = "none"
+      document.getElementById("p4").style.opacity = 0
+      document.getElementById("p5").style.opacity = 0
+      document.getElementById("p6").style.opacity = 0
 setTimeout(next22,4500);
 }
 function next22(){

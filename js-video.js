@@ -33,7 +33,7 @@ function start4(){
     document.getElementById("div1").style.display="flex";
     document.getElementById("div1").style.opacity=1;
 }
-function p1(){
+function pp11(){
     document.getElementById("p1").style.fontWeight = "600";
     document.getElementById("p2").style.fontWeight = "500";
     size = screen.width;
@@ -47,7 +47,7 @@ function p1(){
     }
     
 }
-function p2(){
+function pp22(){
     document.getElementById("p2").style.fontWeight = "600";
     document.getElementById("p1").style.fontWeight = "500";
         size = screen.width;

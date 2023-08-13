@@ -4,9 +4,7 @@ body {
     padding: 0;
 }
 
-.all1 {
-    display: block;
-}
+
 
 .top {
     margin-top: 5vw;
@@ -628,9 +626,6 @@ label {
     text-align: center;
 }
 
-.all3 {
- 
-}
 .all1{
     display: none;
     opacity: 0;

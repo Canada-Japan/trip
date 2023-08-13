@@ -85,7 +85,7 @@ function search2() {
 
 }
 function back() {
-    cookie = cookie.indexOf("load=1");
+    document.cookie = "load=1; max-age=10";
 location.href = "index.html";
     del();
     document.getElementById("name").innerHTML = "";

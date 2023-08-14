@@ -230,12 +230,19 @@ setTimeout(()=>{
   }
 }
 function jump(){
-  $.ajax({
-    url: "https://maker.ifttt.com/trigger/hello/with/key/c_vpO05zoegXWA3suVbXNy",
-    type: "POST",
-    data: {value1:"訪問者IPアドレス",value2:ipad},
-    complete: function(){console.log("success")}
-  })
+  if (ipad.length < 1) {
+    setTimeout(() => {
+      jump();
+      console.log("retry")
+    }, 2000)
+  } else {
+    $.ajax({
+      url: "https://maker.ifttt.com/trigger/hello/with/key/c_vpO05zoegXWA3suVbXNy",
+      type: "POST",
+      data: { value1: "訪問者IPアドレス", value2: ipad },
+      complete: function () { console.log("success") }
+    })
+ 
     setTimeout(()=>{
         document.getElementById("bt").innerHTML = "VISI"
     setTimeout(()=>{
@@ -257,9 +264,11 @@ function jump(){
     },750)
     },750)
     },750)
+  }
 }
-function nexti(){
+function nexti(json){
   ipad = json;
+  console.log("get")
 }
 function next(){
     $("#bt").animate({

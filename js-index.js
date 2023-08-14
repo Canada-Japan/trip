@@ -593,6 +593,7 @@ function p1() {
             }
         }
     }
+}
     function p2() {
         del();
         if (message2 == "canada") {
@@ -643,7 +644,6 @@ function p1() {
             } else if (message2 == "japan") {
                 document.getElementById("namea").innerHTML = "Aoto";
                 dataa = [1027, 1028, 1055, 1058, 1064];
-            }
             last = dataa.length;
             te = "Total:" + last;
             document.getElementById("suma").innerHTML = te;
@@ -674,6 +674,7 @@ function p1() {
                     pics22pa.insertAdjacentHTML('beforeend', data);
                 }
             }
+        }
         } else if (message == "place") {
             if (message2 == "canada") {
                 document.getElementById("name").innerHTML = "GHS";
@@ -1110,7 +1111,7 @@ function p1() {
         if (message == "people") {
             if (message2 == "canada") {
                 document.getElementById("name").innerHTML = "Colin";
-                dataa = [19, 36, 80, 173, 196, 234, 266, 293, 297, 303, 373, 482, 695, 700, 701, 721, 744, 831];
+                dataa = [19, 36, 80, 173, 196, 234, 266, 293, 303, 373, 482, 695, 700, 701, 721, 744, 831];
                 last = dataa.length;
                 te = "Total:" + last;
                 document.getElementById("sum").innerHTML = te;
@@ -1481,7 +1482,7 @@ function p1() {
         }
         if (message == "people") {
             document.getElementById("name").innerHTML = "Shogo";
-            dataa = [3, 6, 19, 65, 74, 89, 100, 159, 163, 170, 237, 252, 266, 268, 286, 300, 348, 358, 365, 401, 410, 604, 611, 654, 745, 769, 775, 780, 813, 876, 974];
+            dataa = [3, 6, 19, 65, 74, 89, 100, 159, 163, 170, 237, 252, 266, 268, 286, 300, 348, 358, 365, 401, 410, 604, 611, 745, 769, 775, 780, 813, 876, 974];
             last = dataa.length;
             te = "Total:" + last;
             document.getElementById("sum").innerHTML = te;
@@ -1814,7 +1815,7 @@ function p1() {
             }
         }
     }
-}
+
 function p12() {
     del();
     if (message2 == "canada") {

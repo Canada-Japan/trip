@@ -535,11 +535,11 @@ label {
         }
 }
 .all1{
-display: none;
-opacity: 0;
+display: block;
+opacity: 1;
 }
 .al1{
-
+display: none;
     background-color: rgb(255, 45, 45);
     height:100vh;
 }
@@ -621,4 +621,20 @@ opacity: 0;
     color:white;
     transform: rotate(90deg);
     border:none;
+}
+.co{
+    position:relative;
+    top:10vw;
+    left:0;
+    width:60vw;
+    height:7.5vw;
+    font-size:4vw;
+    margin-bottom:10vw;
+    border:none;
+    border-bottom:2px solid black;
+    outline:none;
+}
+.co2{
+    position:relative;
+    top:10vw;
 }

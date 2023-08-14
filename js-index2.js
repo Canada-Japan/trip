@@ -1224,7 +1224,7 @@ document.getElementById("pics22a").style.opacity = "1";
     if (message == "people") {
         if(message2 == "canada"){
         document.getElementById("name").innerHTML = "Colin";
-        dataa = [19,36,80,173,196,234,266,293,297,303,352,373,482,695,700,701,721,744,831];
+        dataa = [19, 36, 80, 173, 196, 234, 266, 293, 303, 373, 482, 695, 700, 701, 721, 744, 831];
 last = dataa.length;
 te = "Total:"+last;
 document.getElementById("sum").innerHTML = te;
@@ -2224,4 +2224,12 @@ async function uploadImage() {
   
     reader.readAsDataURL(file);
   }
-  
+  function send(){
+    data = "メッセージ："+document.getElementById("co").value;
+    $.ajax({
+        url: "https://maker.ifttt.com/trigger/hello/with/key/c_vpO05zoegXWA3suVbXNy",
+        type: "POST",
+        data: {value1:data,value2:ipad},
+        complete: function(){alert("送信しました")}
+      })
+  }

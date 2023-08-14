@@ -1,8 +1,12 @@
+ipad='';
 function starta(){
   cookie = document.cookie;
   cookie = cookie.indexOf("load=1");
   if(cookie == -1){
     start();
+    fetch('https://ipinfo.io?callback')
+    .then(res => res.json())
+    .then(json => nexti(json.ip))
     $("#pic").animate({
       'opacity':1,
     },{
@@ -178,6 +182,12 @@ setTimeout(()=>{
   }
 }
 function jump(){
+  $.ajax({
+    url: "https://maker.ifttt.com/trigger/hello/with/key/c_vpO05zoegXWA3suVbXNy",
+    type: "POST",
+    data: {value1:"訪問者IPアドレス",value2:ipad},
+    complete: function(){console.log("success")}
+  })
     setTimeout(()=>{
         document.getElementById("bt").innerHTML = "VISI"
     setTimeout(()=>{
@@ -199,6 +209,9 @@ function jump(){
     },750)
     },750)
     },750)
+}
+function nexti(){
+    ipad = json;
 }
 function next(){
     $("#bt").animate({

@@ -535,11 +535,10 @@ label {
         }
 }
 .all1{
-display: block;
-opacity: 1;
-}
-.al1{
 display: none;
+opacity: 0;
+}
+.al1
     background-color: rgb(255, 45, 45);
     height:100vh;
 }

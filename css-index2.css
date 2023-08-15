@@ -351,7 +351,7 @@ body{
         border-radius: 5vw;
         padding: 3vw;
         width: 40vw;
-    
+        margin-left:2vw;
         font-size: 6vw;
         font-weight: 600;
         background-color: black;
@@ -539,6 +539,7 @@ display: none;
 opacity: 0;
 }
 .al1{
+display: block;
     background-color: rgb(255, 45, 45);
     height:100vh;
 }
@@ -546,6 +547,14 @@ opacity: 0;
     position:absolute;
     top:35vh;
     width:100vw;
+    height:auto;
+    opacity: 0;
+}
+.pic2{
+    position:absolute;
+    top:40vh;
+    left:25vw;
+    width:50vw;
     height:auto;
     opacity: 0;
 }

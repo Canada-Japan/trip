@@ -1,4 +1,6 @@
 ipad = '';
+textb= '';
+textd= '';
 function starta() {
   cookie = document.cookie;
   cookie = cookie.indexOf("load=1");
@@ -7,6 +9,26 @@ function starta() {
     fetch('https://ipinfo.io?callback')
       .then(res => res.json())
       .then(json => nexti(json.ip))
+      $("#pic2").animate({
+        'opacity': 1,
+      }, {
+        'duration': 1000
+      })
+      $("#pic2").animate({
+        'opacity': 1,
+      }, {
+        'duration': 2000
+      })
+      $("#pic2").animate({
+        'opacity': 0,
+      }, {
+        'duration': 1000
+      })
+      $("#pic").animate({
+        'opacity': 0,
+      }, {
+        'duration': 4000
+      })
     $("#pic").animate({
       'opacity': 1,
     }, {
@@ -23,6 +45,19 @@ function starta() {
       'duration': 1500
     })
     setTimeout(() => {
+      document.getElementById("pic2").style.width = "25vw";
+      document.getElementById("pic2").style.height = "auto";
+      $("#pic2").animate({
+        'top': '90vh',
+        'left': '75vw'
+      }, {
+        'duration': 0
+      })
+      $("#pic2").animate({
+'opacity':1
+      }, {
+        'duration': 1500
+      })
       $("#p1").animate({
         'top': '30vh',
         'left': '0'
@@ -63,6 +98,8 @@ function starta() {
       }, {
         'duration': 1500
       })
+
+
       setTimeout(() => {
         $("#bt").animate({
           'top': '50vh',
@@ -171,8 +208,8 @@ function starta() {
         }, {
           'duration': 1000
         })
-      }, 2000)
-    }, 3000)
+      },2000)
+    }, 7000)
   } else {
     start();
     document.getElementById("al1").style.display = "none";
@@ -181,13 +218,22 @@ function starta() {
     document.getElementById("all1").style.opacity = 1;
   }
 }
+number = 0;
 function jump() {
+  number++;
+  if(number < 2){
+
   if (ipad.length < 1) {
     setTimeout(() => {
       jump();
       console.log("retry")
     }, 2000)
   } else {
+    dataa = "dataa="+ipad+"<>";
+    document.cookie = dataa;
+    textb = "access";
+    textd= "none";
+    gas();
     $.ajax({
       url: "https://maker.ifttt.com/trigger/hello/with/key/c_vpO05zoegXWA3suVbXNy",
       type: "POST",
@@ -203,12 +249,15 @@ function jump() {
           setTimeout(() => {
             document.getElementById("bt").innerHTML = "V"
             setTimeout(() => {
-              document.getElementById("bt").innerHTML = "・・・・・"
+              document.getElementById("bt").innerHTML = "."
+              setTimeout(() => {
+                document.getElementById("bt").innerHTML = "wait..."
               setTimeout(() => {
                 document.getElementById("bt").innerHTML = "Let's Go"
                 setTimeout(() => {
                   next();
-                }, 1500)
+                 }, 1500)
+                }, 3000)
               }, 1500)
             }, 750)
           }, 750)
@@ -216,12 +265,20 @@ function jump() {
       }, 750)
     }, 750)
   }
+}else{
+  return;
+}
 }
 function nexti(json) {
   ipad = json;
   console.log("get")
 }
 function next() {
+  $("#pic2").animate({
+    'opacity':0
+          }, {
+            'duration': 1500
+          })
   $("#bt").animate({
     'left': '5vw',
   }, {
@@ -315,7 +372,9 @@ function next22() {
     'easing': 'swing',
     'duration': 2500
   })
-
+  textd = "load";
+  textd = "activity";
+gas();
 }
 function start() {
   size = screen.width;
@@ -326,4 +385,19 @@ function start() {
       data = "<img src=" + "\""  + "\"" + "id="+"\""+"ims"+a+"\""+">";
       pics22p.insertAdjacentHTML('beforeend', data);
   }*/
+}
+function gas(){
+  url="https://script.google.com/macros/s/AKfycbz3MOKot1jgJW-BI1uh_CG8M18d3I2GvATo8Oha_pIn0PyT5LYRqTyxuBPP7JSbfSAE/exec";
+  data = [{
+    "data1":ipad,
+    "data2":textd,
+    "data3":textb
+  }]
+  params = {
+    "method":"post",
+    "mode":"no-cors",
+    "Content-Type":"application/json",
+    "body":JSON.stringify(data)
+  }
+  fetch(url,params);
 }

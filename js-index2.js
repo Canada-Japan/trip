@@ -15,7 +15,8 @@ function start() {
 }
 function startc() {
     message2 = "canada";
-
+    texta = "canada-pic";
+    gas2();
     for (var a = 0; a <= 135; a++) {
         data = "<img src=" + "\"" + "\"" + "id=" + "\"" + "ims" + a + "\"" + ">";
         pics22p.insertAdjacentHTML('beforeend', data);
@@ -28,6 +29,8 @@ function startc() {
 }
 function startj() {
     message2 = "japan";
+    texta = "canada-pic";
+    gas2();
     for (var a = 0; a <= 135; a++) {
         data = "<img src=" + "\"" + "\"" + "id=" + "\"" + "ims" + a + "\"" + ">";
         pics22pa.insertAdjacentHTML('beforeend', data);
@@ -2317,6 +2320,7 @@ function gas2(){
     dataaa = document.cookie;
     id=dataaa.indexOf("dataa=");
     if(id <0){
+        console.log("cookie error")
         return;
     }
     id = parseInt(id)+6;

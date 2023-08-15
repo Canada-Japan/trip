@@ -373,7 +373,7 @@ function next22() {
     'duration': 2500
   })
   textd = "load";
-  textd = "activity";
+  textb = "activity";
 gas();
 }
 function start() {

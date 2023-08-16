@@ -2,6 +2,37 @@ pics22p = '';
 pics22pa = '';
 size = '';
 ipad = "undefined"
+nowpage = 'index.html';
+window.addEventListener("orientationchange", function() {
+	alert ("画面が回転しました" );
+    width = screen.width;
+    height = screen.height;
+    if(width > height){
+//画面横
+if(nowpage == "index.html"){
+document.cookie = "load=1; max-age=10";
+location.href = "index.html";
+}else if(nowpage == "canada"){
+    location.href = "canada.html";
+}else if(nowpage == "japan"){
+    location.href = "japan.html";
+}else if(nowpage == "video"){
+    location.href = "video.html";
+}
+    }else{
+//画面縦
+if(nowpage == "index.html"){
+    document.cookie = "load=1; max-age=10";
+    location.href = "index2.html";
+    }else if(nowpage == "canada"){
+        location.href = "canada-2.html";
+    }else if(nowpage == "japan"){
+        location.href = "japan-2.html";
+    }else if(nowpage == "video"){
+        location.href = "vide2.html";
+    }
+    }
+});
 /*function start() {
     size = screen.width;
     console.log("size:" + size);
@@ -21,6 +52,7 @@ ipad = "undefined"
 //}
 
 function startc() {
+    nowpage = 'canada';
     pics22p = document.getElementById("pics22p");
     message2 = "canada";
     for (var a = 0; a <= 135; a++) {
@@ -32,7 +64,7 @@ function startc() {
     document.getElementById("pics22p").style.opacity = 0
 }
 function startj() {
-
+    nowpage = 'japan';
     pics22pa = document.getElementById("pics22pa");
     message2 = "japan";
     for (var a = 0; a <= 135; a++) {
@@ -64,6 +96,7 @@ function next2() {
     location.href = "japan.html";
 }
 function next3() {
+    nowpage = 'canada';
     if (size < 760) {
         location.href = "video2.html";
     } else {
@@ -105,6 +138,7 @@ function search2() {
 
 }
 function back() {
+    nowpage = 'index.html';
     document.cookie = "load=1; max-age=10";
     location.href = "index.html";
     /*document.getElementById("all1").style.display = "block";
@@ -1902,8 +1936,8 @@ async function uploadImage() {
       fileName = file.name;
   
       const uploadUrl = `https://api.github.com/repos/canada-japan/datas/contents/${fileName}`;
-      const accessToken = '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';
-  //最新コード8月14日
+      const accessToken = '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';
+  //最新コード8月1５日
       const uploadData = {
         message: '画像のアップロード',
         content: imageData.split(',')[1],

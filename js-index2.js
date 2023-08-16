@@ -4,6 +4,37 @@ ipad = '';
 texta = '';
 id3= '';
 accessToken = '';
+nowpage = 'index.html';
+window.addEventListener("orientationchange", function() {
+	alert ("画面が回転しました" );
+    width = screen.width;
+    height = screen.height;
+    if(width > height){
+//画面横
+if(nowpage == "index.html"){
+document.cookie = "load=1; max-age=10";
+location.href = "index.html";
+}else if(nowpage == "canada"){
+    location.href = "canada.html";
+}else if(nowpage == "japan"){
+    location.href = "japan.html";
+}else if(nowpage == "video"){
+    location.href = "video.html";
+}
+    }else{
+//画面縦
+if(nowpage == "index.html"){
+    document.cookie = "load=1; max-age=10";
+    location.href = "index2.html";
+    }else if(nowpage == "canada"){
+        location.href = "canada-2.html";
+    }else if(nowpage == "japan"){
+        location.href = "japan-2.html";
+    }else if(nowpage == "video"){
+        location.href = "vide2.html";
+    }
+    }
+});
 function start() {
     size = screen.width;
     document.getElementById("setimg").src = "https://matsuoka18.github.io/Canada-Photos/pic/Img999.JPG";
@@ -15,6 +46,7 @@ function start() {
     }*/
 }
 function startc() {
+    nowpage = 'canada';
     message2 = "canada";
     texta = "canada-pic";
     gas2();
@@ -29,6 +61,7 @@ function startc() {
     scrollTo(0, 0);
 }
 function startj() {
+    nowpage = 'japan';
     message2 = "japan";
     texta = "canada-pic";
     gas2();
@@ -44,11 +77,13 @@ function startj() {
 }
 
 function next1() {
+    nowpage = 'canada';
     texta = "canada-pic";
     gas2();
     location.href = "canada-2.html";
 }
 function next2() {
+    nowpage = 'japan';
     texta = "japan-pic";
     gas2();
     location.href = "japan-2.html"
@@ -57,6 +92,7 @@ function next3() {
     if (size < 760) {
         texta = "video";
         gas2();
+        nowpage = 'video';
         location.href = "video2.html";
     } else {
         location.href = "video.html";
@@ -97,6 +133,7 @@ function search2() {
 
 }
 function back() {
+    nowpage = 'index.html';
     document.cookie = "load=1; max-age=10";
     location.href = "index.html";
     del();

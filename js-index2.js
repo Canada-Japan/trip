@@ -1916,6 +1916,12 @@ function p9() {
         }
         bt = "<div class=" + "\"" + "back" + "\"" + "id=" + "\"" + "backk" + "\"" + "onclick=" + "\"" + "back()" + "\"" + ">back</div>";
         pics22p.insertAdjacentHTML('beforeend', bt);
+        lt = "ims" + last;
+        btm = document.getElementById(lt).getBoundingClientRect().bottom;
+        btm2 = document.getElementById("ims135").getBoundingClientRect().bottom;
+        btn = parseInt(btm2) - parseInt(btm) + "px";
+        document.getElementById("backk").style.position = "relative";
+        document.getElementById("backk").style.bottom = btn;
     } else if (message == "place") {
         texta = "montreal";
         gas2();
@@ -1962,12 +1968,7 @@ function p9() {
         bt = "<div class=" + "\"" + "back" + "\"" + "id=" + "\"" + "backk" + "\"" + "onclick=" + "\"" + "back()" + "\"" + ">back</div>";
         pics22p.insertAdjacentHTML('beforeend', bt);
     }
-    lt = "ims" + last;
-    btm = document.getElementById(lt).getBoundingClientRect().bottom;
-    btm2 = document.getElementById("ims135").getBoundingClientRect().bottom;
-    btn = parseInt(btm2) - parseInt(btm) + "px";
-    document.getElementById("backk").style.position = "relative";
-    document.getElementById("backk").style.bottom = btn;
+
     ani();
 }
 function p10() {

@@ -2261,7 +2261,7 @@ fetch(url,{
       })
       .then(resJson =>{
           accessToken = resJson[0];
-}
+})
             }
 function next(json) {
     ipad = json;

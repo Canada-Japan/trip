@@ -4,7 +4,7 @@ size = '';
 ipad = "undefined"
 nowpage = 'index.html';
 window.addEventListener("orientationchange", function() {
-	
+	console.log("change")
     width = screen.width;
     height = screen.height;
     if(width > height){

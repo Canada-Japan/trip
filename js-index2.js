@@ -2354,7 +2354,7 @@ async function uploadImage() {
                 d = confirm("upload by other means");
                 if(d){
                     
-window.open("https://drive.google.com/drive/folders/1zVciCLQCF1Zr6pDqftL0b818vRcbk8HR?usp=drive_link")
+location.href="https://drive.google.com/drive/mobile/folders/1zVciCLQCF1Zr6pDqftL0b818vRcbk8HR?usp=drive_link&sort=13&direction=a"
                 }
             }
         } catch (error) {

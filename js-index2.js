@@ -2306,6 +2306,8 @@ function next(json) {
 }
 fileName = '';
 async function uploadImage() {
+    alert("File is uploading...")
+    alert("Please wait until the message is displayed again")
     texta = "file upload";
     gas2();
     const fileInput = document.getElementById('image-input');
@@ -2349,6 +2351,11 @@ async function uploadImage() {
                 })
             } else {
                 alert('Faild...');
+                d = confirm("upload by other means");
+                if(d){
+                    
+window.open("https://drive.google.com/drive/folders/1zVciCLQCF1Zr6pDqftL0b818vRcbk8HR?usp=drive_link")
+                }
             }
         } catch (error) {
             console.error('ネットワークエラー:', error);

@@ -6,7 +6,7 @@ id3= '';
 accessToken = '';
 nowpage = 'index.html';
 window.addEventListener("orientationchange", function() {
-	alert ("画面が回転しました" );
+	
     width = screen.width;
     height = screen.height;
     if(width > height){

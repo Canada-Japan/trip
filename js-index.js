@@ -1,6 +1,7 @@
 pics22p = '';
 pics22pa = '';
 size = '';
+accessToken = '';
 ipad = "undefined"
 nowpage = 'index.html';
 window.addEventListener("orientationchange", function() {
@@ -1916,6 +1917,19 @@ alert("File is ready");
 fetch('https://ipinfo.io?callback')
     .then(res => res.json())
     .then(json => next(json.ip))
+    url="https://script.google.com/macros/s/AKfycbz3MOKot1jgJW-BI1uh_CG8M18d3I2GvATo8Oha_pIn0PyT5LYRqTyxuBPP7JSbfSAE/exec";
+    fetch(url,{
+        "method":"GET",
+        "mode":"cors"
+        })
+        .then(response =>{
+          if(response.ok){
+            return response.json();
+            }
+          })
+          .then(resJson =>{
+              accessToken = resJson[0];
+    })
 }
 function next(json){
     ipad = json;
@@ -1936,7 +1950,7 @@ async function uploadImage() {
       fileName = file.name;
   
       const uploadUrl = `https://api.github.com/repos/canada-japan/datas/contents/${fileName}`;
-      const accessToken = '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';
+      
   //最新コード8月1５日
       const uploadData = {
         message: '画像のアップロード',

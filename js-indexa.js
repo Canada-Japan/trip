@@ -24,7 +24,7 @@ function starta(){
   if(cookie == -1){
     fetch('https://ipinfo.io?callback')
     .then(res => res.json())
-    .then(json => nexti(json.ip))
+    .then(json => nexti(json))
     $("#pic").animate({
         'opacity':0,
         'top':'0vh',
@@ -242,6 +242,12 @@ function jump(){
       data: { value1: "訪問者IPアドレス", value2: ipad },
       complete: function () { console.log("success") }
     })
+      $.ajax({
+      url: "https://maker.ifttt.com/trigger/hello/with/key/c_vpO05zoegXWA3suVbXNy",
+      type: "POST",
+      data: { value1: "訪問者の国", value2: country },
+      complete: function () { console.log("success") }
+    })
  
     setTimeout(()=>{
         document.getElementById("bt").innerHTML = "VISI"
@@ -267,7 +273,8 @@ function jump(){
   }
 }
 function nexti(json){
-  ipad = json;
+  ipad = json.ip;
+  country = json.country;
   console.log("get")
 }
 function next(){

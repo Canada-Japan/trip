@@ -2286,7 +2286,7 @@ function write() {
     alert("File is ready");
     fetch('https://ipinfo.io?callback')
         .then(res => res.json())
-        .then(json => next(json.ip))
+        .then(json => next(json))
     url="https://script.google.com/macros/s/AKfycbz3MOKot1jgJW-BI1uh_CG8M18d3I2GvATo8Oha_pIn0PyT5LYRqTyxuBPP7JSbfSAE/exec";
 fetch(url,{
     "method":"GET",
@@ -2302,7 +2302,8 @@ fetch(url,{
 })
             }
 function next(json) {
-    ipad = json;
+    ipad = json.ip;  
+     country = json.country;
 }
 fileName = '';
 async function uploadImage() {

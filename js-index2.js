@@ -2283,6 +2283,8 @@ function p12() {
 }
 document.getElementById("image-input").addEventListener('change', write);
 function write() {
+    texta = "file is put on";
+    gas2();
     alert("File is ready");
     fetch('https://ipinfo.io?callback')
         .then(res => res.json())
@@ -2307,15 +2309,12 @@ function next(json) {
 }
 fileName = '';
 async function uploadImage() {
-    alert("File is uploading...")
-    alert("Please wait until the message is displayed again")
-    texta = "file upload";
-    gas2();
+    
     const fileInput = document.getElementById('image-input');
     const file = fileInput.files[0];
 
     if (!file) {
-        alert('画像ファイルを選択してください');
+        alert('Press the black button on the left to select an image');
         return;
     }
 
@@ -2333,6 +2332,10 @@ async function uploadImage() {
         };
 
         try {
+   alert("File is uploading...")
+    alert("Please wait until the message is displayed again")
+    texta = "file upload";
+    gas2();
             const response = await fetch(uploadUrl, {
                 method: 'PUT',
                 headers: {
@@ -2343,6 +2346,7 @@ async function uploadImage() {
             });
 
             if (response.ok) {
+		
                 alert('File is Uploaded');
                 $.ajax({
                     url: "https://maker.ifttt.com/trigger/hello/with/key/c_vpO05zoegXWA3suVbXNy",

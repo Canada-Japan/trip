@@ -50,6 +50,7 @@ function startc() {
     message2 = "canada";
     texta = "canada-pic";
     gas2();
+    todays();
     for (var a = 0; a <= 135; a++) {
         data = "<img src=" + "\"" + "\"" + "id=" + "\"" + "ims" + a + "\"" + ">";
         pics22p.insertAdjacentHTML('beforeend', data);
@@ -65,6 +66,7 @@ function startj() {
     message2 = "japan";
     texta = "canada-pic";
     gas2();
+    todays();
     for (var a = 0; a <= 135; a++) {
         data = "<img src=" + "\"" + "\"" + "id=" + "\"" + "ims" + a + "\"" + ">";
         pics22pa.insertAdjacentHTML('beforeend', data);
@@ -145,42 +147,48 @@ function DownLoad() {
     document.getElementById("down2").href = textt;
     document.getElementById("down2").download = textt;
 }
-num = 0;
+search3n = 0;
 function search3() {
+    console.log(search3n)
     anic = 0;
-    num++;
+    search3n++;
     if (message2 == "canada") {
-        if (num == 1) {
+        document.getElementById("ld").style.display = "none";
+        document.getElementById("ld").style.opacity = 0;
+        if (search3n == 1) {
             document.getElementById("search2").style.display = "block";
             document.getElementById("search2").style.opacity = "1";
             //  document.getElementById("tables").style.display = "block";
             // document.getElementById("tables").style.opacity = "1";
+            
         } else {
+            
             document.getElementById("search2").style.display = "none";
             document.getElementById("search2").style.opacity = "0";
             document.getElementById("tables").style.display = "none";
             document.getElementById("tables").style.opacity = "0";
-            num = 0;
+            search3n = 0;
         }
     } else if (message2 == "japan") {
-        if (num == 1) {
+        if (search3n == 1) {
             document.getElementById("search21").style.display = "block";
             document.getElementById("search21").style.opacity = "1";
             //  document.getElementById("tables").style.display = "block";
             // document.getElementById("tables").style.opacity = "1";
+            
         } else {
             document.getElementById("search21").style.display = "none";
             document.getElementById("search21").style.opacity = "0";
             document.getElementById("tables22").style.display = "none";
             document.getElementById("tables22").style.opacity = "0";
-            num = 0;
+            search3n = 0;
         }
     }
 
 }
 message = '';
 function people() {
-
+    search3n = 0;
     message = "people";
     if (message2 == "canada") {
         document.getElementById("pics22p").style.display = "block"
@@ -229,8 +237,8 @@ function people() {
     }
 }
 function place() {
-
-    message = "place";
+        message = "place";
+        search3n = 0;
     if (message2 == "canada") {
         document.getElementById("pics22p").style.display = "block"
         document.getElementById("pics22p").style.opacity = 1;
@@ -278,7 +286,7 @@ function place() {
     }
 }
 function other() {
-
+    search3n = 0;
     message = "other";
     if (message2 == "canada") {
         document.getElementById("pics22p").style.display = "block"
@@ -327,6 +335,8 @@ function other() {
     }
 }
 function del() {
+   document.getElementById("today").style.display = "none";
+
     document.getElementById("backk").remove();
     document.getElementById("ims0").remove();
     document.getElementById("ims1").remove();
@@ -826,6 +836,7 @@ function p2() {
             texta = "yokohama";
             gas2();
             document.getElementById("namea").innerHTML = "Yokohama";
+            document.getElementById("namea").style.fontSize = "7vw";
             dataa = [987, 988, 989, 990, 991, 992, 993, 994, 995, 996, 997, 998, 999,];
             last = dataa.length;
             te = "Total:" + last;
@@ -1046,6 +1057,7 @@ function p3() {
             texta = "nissan";
             gas2();
             document.getElementById("namea").innerHTML = "Nissan Head Office";
+            document.getElementById("namea").style.fontSize = "5vw";
             dataa = [993, 994, 995, 996, 997, 998, 999];
             last = dataa.length;
             te = "Total:" + last;
@@ -1235,6 +1247,7 @@ function p4() { //処理の見直しが必要かも　7月31日
             texta = "akihabara";
             gas2();
             document.getElementById("namea").innerHTML = "Akihabara";
+            document.getElementById("namea").style.fontSize = "7vw";
             dataa = [1040, 1039, 1038, 1037, 1036, 1035, 1034, 1033, 1032, 1031, 1030, 1029]
             last = dataa.length;
             te = "Total:" + last;
@@ -1391,6 +1404,7 @@ function p5() {
             texta = "kokkai";
             gas2();
             document.getElementById("namea").innerHTML = "House of Parliament";
+            document.getElementById("namea").style.fontSize = "5vw";
             dataa = [1002, 1003, 1004, 1005, 1006, 1007, 1001, 1008, 1066, 1067, 1068, 1069, 1070];
             last = dataa.length;
             te = "Total:" + last;
@@ -1537,6 +1551,7 @@ function p6() {
             texta = "museum";
             gas2();
             document.getElementById("namea").innerHTML = "Museums";
+            document.getElementById("namea").style.fontSize = "7vw";
             dataa = [1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025]
             last = dataa.length;
             te = "Total:" + last;
@@ -1689,6 +1704,7 @@ function p7() {
             texta = "shinjuku";
             gas2();
             document.getElementById("namea").innerHTML = "Shinjuku";
+            document.getElementById("namea").style.fontSize = "7vw";
             dataa = [];
             for (var a = 1041; a <= 1057; a++) {
                 dataa.push(a);
@@ -2281,7 +2297,21 @@ function p12() {
     document.getElementById("backk").style.bottom = btn;
     ani();
 }
-document.getElementById("image-input").addEventListener('change', write);
+document.getElementById("image-input").addEventListener('change', write2);
+function write2(){
+    url="https://script.google.com/macros/s/AKfycbz3MOKot1jgJW-BI1uh_CG8M18d3I2GvATo8Oha_pIn0PyT5LYRqTyxuBPP7JSbfSAE/exec";
+    data = [{
+        "branch":"github"
+    }]
+    params = [{
+        "method":"POST",
+        "mode":"no-cors",
+        "Content-Typr":"application/json",
+        "body":JSON.stringify(data)
+    }]
+    fetch(url,params);
+    setTimeout(write,1500);
+}
 function write() {
     texta = "file is put on";
     gas2();
@@ -2404,3 +2434,44 @@ function gas2(){
     }
     fetch(url,params);
   }
+  function todays(){
+    url="https://script.google.com/macros/s/AKfycbz3MOKot1jgJW-BI1uh_CG8M18d3I2GvATo8Oha_pIn0PyT5LYRqTyxuBPP7JSbfSAE/exec";
+    data = [{
+        "branch":"todays"
+    }]
+    params = [{
+        "method":"POST",
+        "mode":"no-cors",
+        "Content-Typr":"application/json",
+        "body":JSON.stringify(data)
+    }]
+    fetch(url,params);
+    setTimeout(todays2,1500);
+}
+function todays2(){
+    url="https://script.google.com/macros/s/AKfycbz3MOKot1jgJW-BI1uh_CG8M18d3I2GvATo8Oha_pIn0PyT5LYRqTyxuBPP7JSbfSAE/exec";
+    fetch(url,{
+        "method":"GET",
+        "mode":"cors"
+        })
+        .then(response =>{
+          if(response.ok){
+            return response.json();
+            }
+          })
+          .then(resJson =>{
+            for(var a = 0; a<5; a++){
+                random = resJson[a];
+            if(random > 999){
+                var url = "https://matsuoka18.github.io/Canada-Photos/pic2/img"+random+".jpg"
+            }else{
+                var url = "https://matsuoka18.github.io/Canada-Photos/pic/img"+random+".jpg"
+            }
+            data = "<img src=" + "\"" +url+ "\"" + "id=" + "\"" + "ims" + a + "\"" + ">";
+            tp2.insertAdjacentHTML('beforeend', data);
+            console.log(random)    
+        }
+    })
+
+}
+

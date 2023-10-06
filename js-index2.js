@@ -2307,7 +2307,7 @@ function write2(){
     params = [{
         "method":"POST",
         "mode":"no-cors",
-        "Content-Typr":"application/json",
+        "Content-Type":"application/json",
         "body":JSON.stringify(data)
     }]
     fetch(url,params);
@@ -2443,7 +2443,7 @@ function gas2(){
     params = [{
         "method":"POST",
         "mode":"no-cors",
-        "Content-Typr":"application/json",
+        "Content-Type":"application/json",
         "body":JSON.stringify(data)
     }]
     fetch(url,params);

@@ -5,14 +5,44 @@
         <link rel="stylesheet" href="css-information.css">
     </head>
 
-    <body>
+    <body onload="start()">
         <script>
+            texta='';
+            function start(){
+                texta = "information";
+                gas2();
+            }
             function topgo(){
                 scrollTo(0,0);
             }
             function bottom(){
                 scrollTo(0,100000000)
             }
+            function gas2(){
+    dataaa = document.cookie;
+    id=dataaa.indexOf("dataa=");
+    if(id <0){
+        console.log("cookie error")
+        return;
+    }
+    id = parseInt(id)+6;
+    id2=dataaa.indexOf("<>");
+    id3 = dataaa.substring(id,id2);
+    url="https://script.google.com/macros/s/AKfycbz3MOKot1jgJW-BI1uh_CG8M18d3I2GvATo8Oha_pIn0PyT5LYRqTyxuBPP7JSbfSAE/exec";
+    data = [{
+      "data1":id3,
+      "data2":texta,
+      "data3":"activity"
+    }]
+    params = {
+      "method":"post",
+      "mode":"no-cors",
+      "Content-Type":"application/json",
+      "body":JSON.stringify(data)
+    }
+    fetch(url,params);
+  }
+
                 </script>
 <ol>
 <li onclick="topgo()">利用ガイド</li>

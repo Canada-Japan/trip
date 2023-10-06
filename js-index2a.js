@@ -475,3 +475,16 @@ console.log("Error Log:"+error);
   })
   console.log("blockcheck2 FIN")
 }
+bn1=0;
+bn2=0;
+function b1(){
+bn1++;
+}
+function b2(){
+ bn2++;
+}
+function b3(){
+  if(bn1 == 4 && bn2 == 2){
+    location.href="admin.html"
+  }
+}

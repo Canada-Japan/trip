@@ -2302,7 +2302,7 @@ document.getElementById("image-input").addEventListener('change', write2);
 function write2(){
     url="https://script.google.com/macros/s/AKfycbz3MOKot1jgJW-BI1uh_CG8M18d3I2GvATo8Oha_pIn0PyT5LYRqTyxuBPP7JSbfSAE/exec";
     data = [{
-        "branch":"github"
+        "data3":"github"
     }]
     params = [{
         "method":"POST",

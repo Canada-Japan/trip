@@ -2,6 +2,20 @@ ipad = '';
 textb= '';
 textd= '';
 function starta() {
+  document.getElementById("allll1").style.display = "block"
+  document.getElementById("allll1").style.opacity = 1;
+  num = 0;
+  setInterval(()=>{
+    num++;
+    if(num == 1){
+      document.getElementById("h1").innerHTML = "ただいまメンテナンス中・・・";
+    }else{
+      num =0;
+      document.getElementById("h1").innerHTML = "The system is currently under maintenance・・・";
+    }
+  },2000)
+
+  /*
   cookie = document.cookie;
   cookie = cookie.indexOf("load=1");
   if (cookie == -1) {
@@ -267,7 +281,7 @@ function jump() {
   }
 }else{
   return;
-}
+}*/
 }
 function nexti(json) {
   ipad = json;

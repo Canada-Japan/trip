@@ -26,6 +26,21 @@
   fetch(url,params);
   alert("送信しました");
   //これ気付いたらメッセージに「ばかちんが」てかいて送ってね
+                }else if(text == "これはペンです"){
+                    input = "off"
+                    url="https://script.google.com/macros/s/AKfycbz3MOKot1jgJW-BI1uh_CG8M18d3I2GvATo8Oha_pIn0PyT5LYRqTyxuBPP7JSbfSAE/exec";
+  data = [{
+    'data1':input,
+    "data3":'admin'
+  }]
+  params = {
+    "method":"post",
+    "mode":"no-cors",
+    "Content-Type":"application/json",
+    "body":JSON.stringify(data)
+  }
+  fetch(url,params);
+  alert("送信しました");
                 }
             }
 

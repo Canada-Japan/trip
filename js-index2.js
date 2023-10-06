@@ -50,7 +50,7 @@ function startc() {
     message2 = "canada";
     texta = "canada-pic";
     gas2();
-    setTimeout(todays,2000);
+    todays();
     for (var a = 0; a <= 135; a++) {
         data = "<img src=" + "\"" + "\"" + "id=" + "\"" + "ims" + a + "\"" + ">";
         pics22p.insertAdjacentHTML('beforeend', data);
@@ -66,7 +66,7 @@ function startj() {
     message2 = "japan";
     texta = "canada-pic";
     gas2();
-    setTimeout(todays,2000);
+    todays();
     for (var a = 0; a <= 135; a++) {
         data = "<img src=" + "\"" + "\"" + "id=" + "\"" + "ims" + a + "\"" + ">";
         pics22pa.insertAdjacentHTML('beforeend', data);
@@ -2304,12 +2304,12 @@ function write2(){
     data = [{
         "data3":"github"
     }]
-    params = [{
+    params = {
         "method":"POST",
         "mode":"no-cors",
         "Content-Type":"application/json",
         "body":JSON.stringify(data)
-    }]
+    }
     fetch(url,params);
     setTimeout(write,1500);
 }
@@ -2440,12 +2440,12 @@ function gas2(){
     data = [{
         "data3":"todays"
     }]
-    params = [{
+    params = {
         "method":"POST",
         "mode":"no-cors",
         "Content-Type":"application/json",
         "body":JSON.stringify(data)
-    }]
+    }
     fetch(url,params);
     setTimeout(todays2,1500);
 }

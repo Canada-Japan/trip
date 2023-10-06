@@ -2,8 +2,9 @@ ipad = '';
 textb= '';
 textd= '';
 function starta() {
-  document.getElementById("allll1").style.display = "block"
-  document.getElementById("allll1").style.opacity = 1;
+  document.getElementById("allll1").style.display = "none"
+  document.getElementById("allll1").style.opacity = 0;
+  /*
   num = 0;
   fetch('https://ipinfo.io?callback')
   .then(res => res.json())
@@ -19,9 +20,7 @@ gas();
       num =0;
       document.getElementById("h1").innerHTML = "The system is currently under maintenance・・・";
     }
-  },2000)
-
-  /*
+  },2000)*/
   cookie = document.cookie;
   cookie = cookie.indexOf("load=1");
   if (cookie == -1) {
@@ -239,7 +238,11 @@ gas();
   }
 }
 number = 0;
+blocklist = 3;
 function jump() {
+  if(blocklist == 1){
+   alert("あなたは運営からアクセスを禁止されています");
+  }else if(blocklist == 0){
   number++;
   if(number < 2){
 
@@ -287,11 +290,13 @@ function jump() {
   }
 }else{
   return;
-}*/
+}
+  }
 }
 function nexti(json) {
   ipad = json;
   console.log("get")
+  blockcheck();
 }
 function next() {
   $("#pic2").animate({
@@ -420,4 +425,53 @@ function gas(){
     "body":JSON.stringify(data)
   }
   fetch(url,params);
+}
+function blockcheck(){
+  console.log("blockcheck START")
+  textb = 'block'
+  url="https://script.google.com/macros/s/AKfycbz3MOKot1jgJW-BI1uh_CG8M18d3I2GvATo8Oha_pIn0PyT5LYRqTyxuBPP7JSbfSAE/exec";
+  data = [{
+    "data1":ipad,
+    "data3":textb
+  }]
+  params = {
+    "method":"post",
+    "mode":"no-cors",
+    "Content-Type":"application/json",
+    "body":JSON.stringify(data)
+  }
+  fetch(url,params);
+  console.log("blockcheck FIN")
+  setTimeout(blockcheck2,7000)
+}
+function blockcheck2(){
+  console.log("blockcheck2 START")
+  url="https://script.google.com/macros/s/AKfycbz3MOKot1jgJW-BI1uh_CG8M18d3I2GvATo8Oha_pIn0PyT5LYRqTyxuBPP7JSbfSAE/exec";
+  fetch(url,{
+    "method":'GET',
+    "mode":"cors",
+  })
+  .then(response =>{
+    if(response.ok){
+      return response.json()
+    }
+  })
+  .then(resJson =>{
+    data = resJson[1];
+    console.log(data);
+    data2 = JSON.stringify(data);
+    data2 = data2.indexOf("result");
+    if(data == "blocked"){
+    blocklist = 1;
+    }else if(data == "unblocked"){
+      blocklist = 0;
+    }else if(data2 ==-1){
+     console.log("Error (other Data)");
+     blockcheck2();
+    }
+  })
+  .catch(error=>{
+console.log("Error Log:"+error);
+  })
+  console.log("blockcheck2 FIN")
 }

@@ -455,20 +455,34 @@ z-index:100;
     .all3 {
 
     }
-
+    .section1{
+        position: relative;
+        background-color: #f5f5f7;
+        height:45vh;
+        width:100vw;
+    }
+    .section1 p{
+    padding-top:5vh;
+     text-align: center;
+     font-size:5vh;
+     font-weight:600;
+     letter-spacing: 0.5vw;
+    }
+    
 .send2 {
-    position: relative;
+    position:absolute;
+    top:15vh;
     display: inline-block;
-    height: 6vw;
-    width: 60vw;
+    height: 25vh;
+    width: 90vw;
     margin-left: 5vw;
-    margin-bottom: 10vw;
-    margin-top:40vw;
+    
 }
 
-.send2 .p {
+.send22 .p {
     position: absolute;
-    bottom: 0;
+    left:0;
+    bottom:0;
     width: 40vw;
     font-weight: 550;
     font-size: 10vw;
@@ -476,9 +490,9 @@ z-index:100;
     margin: 0;
 }
 
-.send2 div {
+.send22 div {
     position: absolute;
-    bottom: 0;
+    bottom:1vh;
     left: 65vw;
     width: 20vw;
     height: 8vw;
@@ -499,14 +513,21 @@ z-index:100;
     border: none;
 
 }
+.section1 .send22{
+position:absolute;
+left:0;
+top:0;
+width:90vw;
+height:15vh;
 
+}
 label>input {
     display: none;
 }
 
-label {
+.section1 label {
     position: absolute;
-    bottom: 0;
+    bottom:1vh;
     left: 40vw;
     display: block;
     width: 20vw;
@@ -517,6 +538,47 @@ label {
     color: white;
     font-size: 5vw;
     text-align: center;
+}
+.section1 .send222{
+    position:absolute;
+    bottom:0;
+    
+    width:90vw;
+    height:10vh;
+    z-index:100;
+}
+.section1 .send222 div {
+    position: absolute;
+    bottom:0;
+    left: 65vw;
+    width: 20vw;
+    height: 8vw;
+    border: 2px solid black;
+    font-size: 5vw;
+    text-align: center;
+    display: inline-block;
+    transition: 0.1s;
+}
+
+.send222 div:hover {
+    border-radius: 5vw;
+    font-size: 5.3vw;
+}
+
+.send222 div:active {
+    font-weight: 600;
+    border: none;
+}
+.send222 input{
+   position:absolute;
+   bottom:0;
+    width:60vw;
+    height:7.5vw;
+    font-size:4vw;
+    border:none;
+    border-bottom:2px solid black;
+    outline:none;
+    background-color: #f5f5f7;
 }
 .ld{
     position: relative;
@@ -634,22 +696,8 @@ opacity: 0;
     transform: rotate(90deg);
     border:none;
 }
-.co{
-    position:relative;
-    top:10vw;
-    left:0;
-    width:60vw;
-    height:7.5vw;
-    font-size:4vw;
-    margin-bottom:10vw;
-    border:none;
-    border-bottom:2px solid black;
-    outline:none;
-}
-.co2{
-    position:relative;
-    top:10vw;
-}
+
+
 .today{
 position: relative;
 top:10vw;
@@ -670,4 +718,32 @@ z-index:0;
 .allll1{
     display: none;
     opacity: 0;
+}
+.information{
+    position:relative;
+    width:100vw;
+}
+.information p{
+    width:100vw;
+    text-align: center;
+    font-weight: 600;
+    font-size: 10vw;
+    display: inline-block;
+}
+.inf1{
+    border-top:0.25vw solid black;
+    border-bottom:0.25vw solid black;
+    width:100vw;
+    height:40vh;
+}
+.inf1 h4{
+font-size:6vw;
+}
+.inf1 span{
+    font-size:3vw;
+}
+.inf1 p{
+    text-align: left;
+    font-size:4vw;
+    font-weight:500;
 }

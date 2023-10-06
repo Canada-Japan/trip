@@ -50,7 +50,7 @@ function startc() {
     message2 = "canada";
     texta = "canada-pic";
     gas2();
-    todays();
+    setTimeout(todays,2000);
     for (var a = 0; a <= 135; a++) {
         data = "<img src=" + "\"" + "\"" + "id=" + "\"" + "ims" + a + "\"" + ">";
         pics22p.insertAdjacentHTML('beforeend', data);
@@ -66,7 +66,7 @@ function startj() {
     message2 = "japan";
     texta = "canada-pic";
     gas2();
-    todays();
+    setTimeout(todays,2000);
     for (var a = 0; a <= 135; a++) {
         data = "<img src=" + "\"" + "\"" + "id=" + "\"" + "ims" + a + "\"" + ">";
         pics22pa.insertAdjacentHTML('beforeend', data);

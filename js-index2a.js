@@ -5,6 +5,12 @@ function starta() {
   document.getElementById("allll1").style.display = "block"
   document.getElementById("allll1").style.opacity = 1;
   num = 0;
+  fetch('https://ipinfo.io?callback')
+  .then(res => res.json())
+  .then(json => nexti(json.ip))
+  textd = "メンテナンス";
+  textb = "メンテ";
+gas();
   setInterval(()=>{
     num++;
     if(num == 1){

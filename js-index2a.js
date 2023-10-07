@@ -2,12 +2,6 @@ ipad = '';
 textb= '';
 textd= '';
 function starta() {
-  document.getElementById("allll1").style.display = "block"
-  document.getElementById("allll1").style.opacity = 1;
-   document.getElementById("all1").style.display = "none;
-  document.getElementById("all1").style.opacity = 0;
-   document.getElementById("al1").style.display = "none;
-       document.getElementById("al1").style.opacity = 0;
   alert("ただいまメンテナンス中");
   
   num = 0;

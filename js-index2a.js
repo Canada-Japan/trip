@@ -8,6 +8,7 @@ function starta() {
   document.getElementById("all1").style.opacity = 0;
    document.getElementById("al1").style.display = "none;
        document.getElementById("al1").style.opacity = 0;
+  alert("ただいまメンテナンス中");
   
   num = 0;
   fetch('https://ipinfo.io?callback')

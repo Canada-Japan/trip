@@ -1821,6 +1821,7 @@ function p8() {
         bt = "<div class=" + "\"" + "back" + "\"" + "id=" + "\"" + "backk" + "\"" + "onclick=" + "\"" + "back()" + "\"" + ">back</div>";
         pics22p.insertAdjacentHTML('beforeend', bt);
     } else if (message == "place") {
+	    if(message2 == "canada"){
         texta = "ottawa";
         gas2();
         document.getElementById("name").innerHTML = "Ottawa .D";
@@ -1857,6 +1858,9 @@ function p8() {
         }
         bt = "<div class=" + "\"" + "back" + "\"" + "id=" + "\"" + "backk" + "\"" + "onclick=" + "\"" + "back()" + "\"" + ">back</div>";
         pics22p.insertAdjacentHTML('beforeend', bt);
+	    }else if(message2 == "japan"{
+location.href ="https://matsuoka18.github.io/trip/";
+	    }
     } else if (message == "other") {
         document.getElementById("name").innerHTML = "Bowling";
         for (var a = 0; a <= 135; a++) {

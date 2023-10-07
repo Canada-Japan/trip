@@ -2,9 +2,11 @@ ipad = '';
 textb= '';
 textd= '';
 function starta() {
-  document.getElementById("allll1").style.display = "none"
-  document.getElementById("allll1").style.opacity = 0;
-  /*
+  document.getElementById("allll1").style.display = "block"
+  document.getElementById("allll1").style.opacity = 1;
+   document.getElementById("all1").style.display = "none;
+  document.getElementById("all1").style.opacity = 0;
+  
   num = 0;
   fetch('https://ipinfo.io?callback')
   .then(res => res.json())
@@ -20,8 +22,8 @@ gas();
       num =0;
       document.getElementById("h1").innerHTML = "The system is currently under maintenance・・・";
     }
-  },2000)*/
-  cookie = document.cookie;
+  },2000)
+  /*cookie = document.cookie;
   cookie = cookie.indexOf("load=1");
   if (cookie == -1) {
     start();
@@ -236,6 +238,7 @@ gas();
     document.getElementById("all1").style.display = "block";
     document.getElementById("all1").style.opacity = 1;
   }
+  */
 }
 number = 0;
 blocklist = 3;

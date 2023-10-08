@@ -1858,7 +1858,7 @@ function p8() {
         }
         bt = "<div class=" + "\"" + "back" + "\"" + "id=" + "\"" + "backk" + "\"" + "onclick=" + "\"" + "back()" + "\"" + ">back</div>";
         pics22p.insertAdjacentHTML('beforeend', bt);
-	    }else if(message2 == "japan"{
+	    }else if(message2 == "japan"){
 location.href ="https://matsuoka18.github.io/trip/";
 	    }
     } else if (message == "other") {
@@ -2479,4 +2479,3 @@ function todays2(){
     })
 
 }
-

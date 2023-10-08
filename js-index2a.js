@@ -2,7 +2,7 @@ ipad = '';
 textb= '';
 textd= '';
 function starta() {
-  alert("ただいまメンテナンス中");
+  /*alert("ただいまメンテナンス中");
   
   num = 0;
   fetch('https://ipinfo.io?callback')
@@ -19,8 +19,8 @@ gas();
       num =0;
       document.getElementById("h1").innerHTML = "The system is currently under maintenance・・・";
     }
-  },2000)
-  /*cookie = document.cookie;
+  },2000)*/
+  cookie = document.cookie;
   cookie = cookie.indexOf("load=1");
   if (cookie == -1) {
     start();
@@ -235,7 +235,7 @@ gas();
     document.getElementById("all1").style.display = "block";
     document.getElementById("all1").style.opacity = 1;
   }
-  */
+  
 }
 number = 0;
 blocklist = 3;

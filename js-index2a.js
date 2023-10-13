@@ -241,7 +241,7 @@ number = 0;
 blocklist = 3;
 function jump() {
   if(blocklist == 1){
-   alert("あなたは運営からアクセスを禁止されています");
+   alert("メンテナンス中...");
   }else if(blocklist == 0){
   number++;
   if(number < 2){

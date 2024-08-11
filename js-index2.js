@@ -2408,12 +2408,17 @@ function send() {
     texta = "message";
     gas2();
     data = "メッセージ：" + document.getElementById("co").value;
-    $.ajax({
-        url: "https://maker.ifttt.com/trigger/hello/with/key/c_vpO05zoegXWA3suVbXNy",
-        type: "POST",
-        data: { value1: data, value2: ipad },
-        complete: function () { alert("送信しました") }
-    })
+    var url = "https://script.google.com/macros/s/AKfycbxV6_8DSnuOmJ0CBSmxK6d0OrcbPmODzmwlvUeo0psoU54xa2kz5RK8FouTEx0YRCsR/exec";
+    var datas = [];
+    datas.push(data);
+    var params = {
+        "method":"post",
+        "mode":"no-cors",
+        "Content-Type":"application/json",
+        "body":JSON.stringify(datas)
+    }
+    fetch(url,params);
+    alert("送信しました");
 }
 function gas2(){
     dataaa = document.cookie;

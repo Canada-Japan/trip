@@ -72,7 +72,7 @@ gas();
         'duration': 0
       })
       $("#pic2").animate({
-'opacity':1
+'opacity':0
       }, {
         'duration': 1500
       })

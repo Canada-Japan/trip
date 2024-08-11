@@ -2407,13 +2407,16 @@ location.href="https://drive.google.com/drive/mobile/folders/1zVciCLQCF1Zr6pDqft
 function send() {
     texta = "message";
     gas2();
-    data = "["+"\""+"メッセージ→" + document.getElementById("co").value+"\""+"]";
+    data = "メッセージ→" + document.getElementById("co").value;
     var url = "https://script.google.com/macros/s/AKfycbxV6_8DSnuOmJ0CBSmxK6d0OrcbPmODzmwlvUeo0psoU54xa2kz5RK8FouTEx0YRCsR/exec";
+    var datas = [{
+        "data":data
+    }]
     var params = {
         "method":"post",
         "mode":"no-cors",
         "Content-Type":"application/json",
-        "body":data
+        "body":JSON.stringify(datas)
     }
     fetch(url,params);
     console.log(data);

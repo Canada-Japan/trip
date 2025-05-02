@@ -33,6 +33,7 @@ body{
         width:100vw;
         height:auto;
         margin-top:80vw;
+        z-index:0;
     }
     .img1 .img2{
         margin-top:0;
@@ -50,9 +51,10 @@ body{
         letter-spacing:1vw;
     }
     .img1 div{
+        position: relative;
         text-align:center;
-        padding:5vw;
         width:35vw;
+        padding:5vh;
         font-size:2vw;
         margin-left:6vw;
     margin-top:60vw;
@@ -60,7 +62,9 @@ body{
     font-size:5vw;
     color:white;
        transition: 0.1s;
+       z-index:100;
     }
+
     
     .img1 div:hover{
         border-radius:50px;
@@ -93,7 +97,7 @@ body{
     
     
     .search {
-        width: 100vw;
+        width:40vw;
         margin-top: 30vw;
         margin-left:5vw;
         position:absolute;left:0;
@@ -595,6 +599,8 @@ label>input {
         opacity:0;
         }
 }
+
+
 .all1{
 display: none;
 opacity: 0;
